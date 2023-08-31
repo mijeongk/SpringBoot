@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+		table, td, th { border: 1px solid gray; padding: 5px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+	<h3><b>조건문</b></h3>
+	<hr />
+	PersonVO : [[${person}]] <br />
+	이름 : [[${person.name}]] <br />
+		나이 : [[${person.age}]] <br />
+		성별 : [[${person.gender}]] <br />
+		성별 : [[${person.gender ? "남자" : "여자"}]] <br />
+		성별 : 
+		<span th:if="${person.gender}">남자</span><span th:if="${!person.gender}">여자</span> <br />
+		성별 : 
+		<span th:if="${person.gender}">남자</span><span th:unless="${person.gender}">여자</span> <br />
+	<hr />
+		<th:block th:each="p, vs : ${persons}">
+			[[${vs.index}]] - [[${vs.count}]]. [[${p.name}]]([[${p.age}]]세) : 
+			<span th:if="${p.age ge 20}">성년</span><span th:unless="${p.age ge 20}">미성년</span> <br />
+		</th:block>
+	<hr />
+		<b>Null Check</b> <br />
+		결혼 : <span th:if="${marriage==null}">미혼</span><span th:if="${marriage!=null}">기혼</span> <br />
+		<b>빈문자열 Check</b> <br />
+		취미 : <span th:if="${hobby==null}">없다</span><span th:if="${hobby!=null}">있다</span> <br />
+		취미 : <span th:if="${#strings.isEmpty(hobby)}">없다</span><span th:if="${not #strings.isEmpty(hobby)}">있다</span> <br />
+	<hr />
+	<table border="1">
+    <tr>
+        <th>번호</th>
+        <th>이름</th>
+        <th>나이</th>
+        <th>연령대</th>
+        <th>성별</th>
+    </tr>
+    <tr th:each="user, userStat : ${persons}">
+        <td th:text="${userStat.count}">1</td>
+        <td th:text="${user.name}">username</td>
+        <td th:text="${user.age}">age</td>
+        <td th:switch="${user.age/10}">  
+        	[[${user.age/10}]] - 
+            <span th:case="1">10대</span>  
+            <span th:case="2">20대</span>
+            <span th:case="*">기타</span> 
+        </td>
+        <td>
+        	<span th:if="${user.gender}">남자</span><span th:unless="${user.gender}">여자</span>
+        </td>
+    </tr>
+    </table>
+	<hr />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>

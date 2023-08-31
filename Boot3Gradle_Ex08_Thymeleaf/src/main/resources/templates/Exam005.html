@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+		table, td, th { border: 1px solid gray; padding: 5px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+		<h2>반복문 사용하기 4(맵)</h2>
+		<!--/* 
+		삼항 연산자 사용가능
+		조건식 ? 참인경우값 : 거짓인 경우값
+		
+		조건문
+		th:if="조건식"
+		*/-->
+		<hr />
+		<h2>맵 개별 접근하기</h2>
+		이름 : [[${map.name}]] <br />
+		나이 : [[${map.age}]] <br />
+		성별 : [[${map.gender}]] <br />
+		성별 : [[${map.gender ? "남자" : "여자"}]] <br />
+		성별 : [[${map.gender==false ? "남자" : "여자"}]] <br />
+		성별 : [[${!map.gender ? "남자" : "여자"}]] <br />
+		성별 : <span th:if="${map.gender}">남자</span><span th:if="${!map.gender}">여자</span> <br />
+		<b>Null Check</b> <br />
+		결혼 : <span th:if="${map.marriage==null}">미혼</span><span th:if="${map.marriage!=null}">기혼</span> <br />
+		<b>빈문자열 Check</b> <br />
+		취미 : <span th:if="${map.hobby==null}">없다</span><span th:if="${map.hobby!=null}">있다</span> <br />
+		취미 : <span th:if="${#strings.isEmpty(map.hobby)}">없다</span><span th:if="${not #strings.isEmpty(map.hobby)}">있다</span> <br />
+		<hr />
+		<h2>맵 전체내용 반복</h2>
+		<table>
+			<tr>
+				<th>키</th>
+				<th>값</th>
+			</tr>
+		    <tr th:each="entry : ${map}">
+		        <td th:text="${entry.key}">Key 1</td>
+	    	    <td th:text="${entry.value}">Value 1</td>
+		    </tr>
+		</table>
+		<hr />
+		<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+		table, td, th { border: 1px solid gray; padding: 5px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+	<h2>SpringEL 표현식</h2>
+	<hr />
+	<h3><b>Object</b></h3>
+	이름 : [[${person.name}]], [[${person.getName()}]], [[${person['name']}]] <br />
+	나이 : [[${person.age}]]세, [[${person.getAge()}]]세, [[${person['age']}]]세 <br />			
+	성별 : [[${person.gender ? "남자":"여자"}]],
+		   [[${person['gender'] ? "남자":"여자"}]],
+		   [[${person.isGender() ? "남자":"여자"}]] <br />
+	이름 :
+	<span th:text="${person.name}"></span>
+	<span th:text="${person['name']}"></span>
+	<span th:text="${person.getName()}"></span> <br />
+	<hr />
+	<h3><b>List</b></h3>
+	<ul th:each="person : ${list}">
+		<li>[[${person.name}]]([[${person['age']}]]세, [[${person.isGender()?"남":"여"}]])</li>
+	</ul>
+	이름 :
+	<span th:text="${list[0].name}"></span>, 
+	<span th:text="${list[1]['name']}"></span>, 
+	<span th:text="${list[2].getName()}"></span>, 
+	[[${list[3].getName()}]] <br />
+	<hr />
+	<h3><b>Map</b></h3>
+	<ul th:each="person : ${map}">
+		<li>[[${person.key}]] : 
+		[[${person.value.name}]]
+		([[${person.value['age']}]]세, 
+		[[${person.value.isGender?"남":"여"}]])</li>
+	</ul>
+	이름 :
+	<span th:text="${map['person1'].name}"></span>, 
+	<span th:text="${map['person2']['name']}"></span>, 
+	<span th:text="${map['person3'].getName()}"></span>, 
+	[[${map['person4'].getName()}]] <br />
+	<hr />
+	<h3><b>타임리프에 지역변수를 사용하기 - th:with</b></h3>
+	<div th:with="p=${map['person1']}">
+	이름 : [[${p.name}]]([[${p.getAge}]]세, [[${p['gender']?"남":"여"}]]) <br />
+	</div>
+	<hr />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+		table, td, th { border: 1px solid gray; padding: 5px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+		<h2>VO 사용하기</h2>
+		<!--/* 
+		
+		HTML요소에 th:object=${user}를 정의해두면 
+		*{name}, *{address}, *{tel} 와 같이 user를 생략한 형태로 기술할 수 있다.
+		
+		*/-->
+		<hr />
+		<h2>객체 출력</h2>
+		[[${person}]]
+		<hr />
+		<h2>VO 개별 접근하기</h2>
+		이름 : [[${person.name}]] <br />
+		나이 : [[${person.age}]] <br />
+		성별 : [[${person.gender}]] <br />
+		성별 : [[${person.gender ? "남자" : "여자"}]] <br />
+		성별 : [[${person.gender==false ? "남자" : "여자"}]] <br />
+		성별 : [[${!person.gender ? "남자" : "여자"}]] <br />
+		성별 : <span th:if="${person.gender}">남자</span>
+		       <span th:if="${!person.gender}">여자</span> <br />
+		<hr />
+		<h2>.대신 []로 사용하여 접근</h2>
+		이름 : [[${person['name']}]] <br />
+		나이 : [[${person['age']}]] <br />
+		성별 : [[${person['gender'] ? "남자" : "여자"}]] <br />
+		<hr />
+		<h2>Getter를 사용하여 접근</h2>
+		이름 : [[${person.getName()}]] <br />
+		나이 : [[${person.getAge()}]] <br />
+		성별 : [[${person.isGender() ? "남자" : "여자"}]] <br />
+		<hr />
+		<h2>블록으로 잡고 객체명 생략(*{}사용)</h2>
+		<th:block th:object="${person}">
+			[[*{name}]] ([[*{age}]]세, [[*{gender ? "남자" : "여자"}]])
+		</th:block>
+		<hr />
+		<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>

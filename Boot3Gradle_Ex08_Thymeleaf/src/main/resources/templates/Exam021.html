@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+		table, td, th { border: 1px solid gray; padding: 5px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+	<h3><b>메세지 국제화</b></h3>
+	<hr />
+    <h1>i18n 테스트</h1>
+    현재 로게일 : <span th:text="${#locale}"></span> <br /> <hr />
+	<img src="/images/001.png" onclick="location.href='?locale=ko_KR'"/> &nbsp;
+	<img src="/images/002.png" onclick="location.href='?locale=en_US'"/> &nbsp;
+	<img src="/images/003.png" onclick="location.href='?locale=ko_KP'"/> &nbsp;
+	<img src="/images/004.png" onclick="location.href='?locale=ja_JP'"/> <br />
+	<hr />
+	<p th:text="#{common.enter}"></p>
+    <p th:text="#{common.hello}"></p>
+	[[#{common.enter}]] <br />
+	[[#{common.hello}]] <br />
+	<hr />
+	[[${#messages.msg('common.enter')}]] <br />
+	[[${#messages.msg('common.hello')}]] <br />
+	[[${#messages.msg('common.hello2','이세상')}]] <br />
+	[[${#messages.msg('common.hello3','저세상',33)}]] <br />
+	[[${#messages.msg('common.hello2',#messages.msg('name'))}]] <br />
+	[[${#messages.msg('common.hello3',#messages.msg('name'),#messages.msg('age'))}]] <br />
+	<hr />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+		table, td, th { border: 1px solid gray; padding: 5px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+	<h2>내장 객체 사용하기</h2>
+	[[${obj}]]
+	<hr />	
+	string : [[${obj.string}]] <br />
+	string : [(${obj.string})] <br />
+	number : [[${obj.number}]] <br />
+	number : [[${obj.array}]] <br />
+	<ul>
+		<li th:each="n : ${obj.array}">[[${n}]]</li>
+	</ul>
+	내장 객체 속성 : [[${obj.object.property}]] <br />
+	내장 객체의 내장 객체: [[${obj.object.subobj.numero}]] <br />
+	<ol>
+		<li th:each="name : ${obj.object.subobj.arr}">[[${name}]]</li>
+	</ol>	
+	<hr />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>

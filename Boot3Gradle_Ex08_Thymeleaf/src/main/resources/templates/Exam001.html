@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+		<h2>설정파일의 메세지 직접 읽기</h2>
+		<!--/* 
+		application.yml이나 application.properties 파일에서 직접읽기
+		Thymeleaf의 주석이다. --와 /* 사이에 공백이 있으면 안됨!!!
+		
+		[[ ]] : 태그가 무시된다.
+		[( )] : 태그가 적용된다. 
+		
+		${변수} : 변수의 내용을 가져온다.
+		#{변수} : 프로퍼티 파일의 내용을 가져온다.
+		*/-->
+		application.properties 메세지 : [[${@environment.getProperty('main.title')}]] <br />
+		application.properties 메세지 : [(${@environment.getProperty('main.title')})] <br />
+		message.properties 메세지 : [[#{common.enter}]] <br />
+		message.properties 메세지 : [(#{common.enter})] <br />
+		<hr />
+		<h2>Model에 저장된 값 읽기</h2>
+		모델 메세지 : [[${today}]] <br />
+		모델 메세지 : [(${today})] <br />
+		<hr />
+		<h2>태그를 사용하여 출력하기</h2>
+		<!--/* 
+		th:text="출력할 내용" : 태그가 무시된다.
+		th:utext="출력할 내용" : 태그가 적용된다. 
+		{}안에서 문자열의 결합은 + 연산자를 사용한다.
+		||사이에서는 문자열과 ${}를 연산자 없이 혼합사용한다.
+		*/-->		
+		<p th:text="${@environment.getProperty('main.title')}">application.properties 메세지</p>
+		<p th:text="#{common.enter}">message.properties 메세지</p>
+		<p th:text="${'모델 메세지 : ' + today}">모델 메세지</p>
+		<p th:text="${'모델 메세지 : ' + title}">모델 메세지</p>
+		<p th:text="${'모델 메세지 : ' + enter}">모델 메세지</p>
+		<p th:text="|모델 메세지 : ${enter}|">모델 메세지</p>
+		<hr />
+		<p th:utext="${@environment.getProperty('main.title')}">application.properties 메세지</p>
+		<p th:utext="#{common.enter}">message.properties 메세지</p>
+		<p th:utext="${'모델 메세지 : ' + today}">모델 메세지</p>
+		<p th:utext="${'모델 메세지 : ' + title}">모델 메세지</p>
+		<p th:utext="${'모델 메세지 : ' + enter}">모델 메세지</p>
+		<p th:utext="|모델 메세지 : ${enter}|">모델 메세지</p>
+		<hr />
+		<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>

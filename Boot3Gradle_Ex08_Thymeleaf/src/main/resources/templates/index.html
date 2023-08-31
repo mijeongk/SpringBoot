@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+<title>Thymeleaf 공부하기</title>
+<style type="text/css">
+.info {
+	width: 90%;
+	padding: 10px;
+	margin: auto;
+	border: 1px solid gray;
+	margin-bottom: 10px;
+	font-size: 18pt;
+	border-radius: 20px;
+}	
+</style>
+<script type="text/javascript">
+	$(function(){
+		// alert("Hello JQuery!!!");
+	});
+</script>
+</head>
+<body>
+	<div class="info">
+		서버시간 : [[${serverTime}]]
+		<hr />
+		<img src="/images/linux-icon.png" alt="귀여운 펭귄" width="100" height="100" />
+		<img src="/images/linux-icon2.png" alt="건방진 펭귄" width="100"	height="100" />
+		<hr />
+		<a href="/html/hello.html"  class="btn btn-sm btn-outline-success">정적페이지</a>
+		<a href="/noPage"  class="btn btn-sm btn-outline-success">에러페이지</a>
+		<a href="/swagger-ui/index.html"  class="btn btn-sm btn-outline-success">Spring Doc!!!</a>
+		<hr />
+		Thymeleaf를 공부해 보자!!! <br />
+		<a href="/th/ex001"  class="btn btn-sm btn-outline-success">텍스트 출력하기</a>
+		<a href="/th/ex018"  class="btn btn-sm btn-outline-success">연산</a>
+		<a href="/th/ex019"  class="btn btn-sm btn-outline-success">조건문</a>
+		<a href="/th/ex002"  class="btn btn-sm btn-outline-success">반복문 사용하기 1(배열)</a>
+		<a href="/th/ex003"  class="btn btn-sm btn-outline-success">반복문 사용하기 2(리스트)</a>
+		<a href="/th/ex004"  class="btn btn-sm btn-outline-success">반복문 사용하기 3(단순)</a>
+		<a href="/th/ex005"  class="btn btn-sm btn-outline-success">반복문 사용하기 4(맵)</a>
+		<a href="/th/ex020"  class="btn btn-sm btn-outline-success">문서포함(fragment)</a>
+		<br />
+		<a href="/th/ex006"  class="btn btn-sm btn-outline-success">VO 사용하기</a>
+		<a href="/th/ex007"  class="btn btn-sm btn-outline-success">VO의 리스트 사용하기(천자문) 1</a>
+		<a href="/th/ex008"  class="btn btn-sm btn-outline-success">VO의 리스트 사용하기(천자문) 2</a>
+		<a href="/th/ex009"  class="btn btn-sm btn-outline-success">내장객체 사용하기</a>
+		<a href="/th/ex010"  class="btn btn-sm btn-outline-success">성경책이름</a>
+		<a href="/th/ex011"  class="btn btn-sm btn-outline-success">영화순위</a>
+		<a href="/th/ex012"  class="btn btn-sm btn-outline-success">뉴스RSS</a>
+		<a href="/th/ex013"  class="btn btn-sm btn-outline-success">JSON읽기</a>
+		<br />
+		<a href="/th/ex014"  class="btn btn-sm btn-outline-success">Session/Application 영역</a>
+		<a href="/th/ex015"  class="btn btn-sm btn-outline-success">SpringEL 표현식</a>
+		<a href="/th/ex016"  class="btn btn-sm btn-outline-success">기본객체</a>
+		<a href="/th/ex017"  class="btn btn-sm btn-outline-success">템플릿정보</a>
+		<br />
+		<a href="/th/ex021"  class="btn btn-sm btn-outline-success">메세지(국제화)</a>
+		<br />
+		<br />
+		미구현
+		<br />
+		<br />
+		<a href="/th/ex022"  class="btn btn-sm btn-outline-success">숫자</a>
+		<a href="/th/ex023"  class="btn btn-sm btn-outline-success">문자열</a>
+		<a href="/th/ex024"  class="btn btn-sm btn-outline-success">논리</a>
+		<a href="/th/ex025"  class="btn btn-sm btn-outline-success">날짜</a>
+		<a href="/th/ex026"  class="btn btn-sm btn-outline-success">달력</a>
+		<a href="/th/ex027"  class="btn btn-sm btn-outline-success">객체</a>
+		<a href="/th/ex028"  class="btn btn-sm btn-outline-success">URL/URI</a>
+		<a href="/th/ex029"  class="btn btn-sm btn-outline-success">배열</a>
+		<a href="/th/ex030"  class="btn btn-sm btn-outline-success">리스트</a>
+		<a href="/th/ex031"  class="btn btn-sm btn-outline-success">셑</a>
+		<a href="/th/ex032"  class="btn btn-sm btn-outline-success">맵</a>
+		
+	</div>
+</body>
+</html>

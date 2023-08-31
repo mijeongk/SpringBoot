@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+		<h2>반복문 사용하기 3(단순)</h2>
+		<!--/* 
+		컬렉션 없이 단순 반복 처리를 하고 싶다면 
+		Numbers Class(org.thymeleaf.expression.Numbers)의 Utility method인  
+		#numbers.sequence을 사용하여 먼저 원하는 반복 횟수 만큼의 배열을 생성한 뒤 
+		th:each 의 컬렉션에 넣어 주시면 됩니다.
+		
+		${#numbers.sequence(from,to)}
+		${#numbers.sequence(from,to,step)}
+		*/-->
+		서버시간 : [(${today})] <br />
+		<hr />
+		<th:block th:each="num : ${#numbers.sequence(1, 5)}">
+			<p th:text="|${num} : ${today}|">여기 내용 무시</p>
+		</th:block>
+		<hr />
+		<th:block th:each="num : ${#numbers.sequence(1, 5, 2)}">
+			<p th:text="|${num} : ${today}|">여기 내용 무시</p>
+		</th:block>
+		<hr />
+		<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>

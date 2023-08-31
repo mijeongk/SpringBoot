@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+		<h2>반복문 사용하기 2(리스트)</h2>
+		<!--/* 
+		th:each="변수 : ${컬렉션}"
+		th:each="변수, 상태변수 : ${컬렉션}"
+		
+		---------------------------------------------------------
+		Thymeleaf가 제공하는 인덱스 기능
+		---------------------------------------------------------
+		index	0부터 시작하는 현재 iteration의 index
+		count	반복횟수
+		size	iterated variable의 총 요소 갯수
+		current	매 반복마다 변수
+		even	현재 iteration이 짝수인지? boolean 값을 반환
+		odd	    현재 iteration이 홀수인지? boolean 값을 반환
+		first	현재 iteration이 첫번째인지? boolean 값을 반환
+		last	현재 iteration이 마지막인지? boolean 값을 반환			
+		---------------------------------------------------------
+		*/-->
+		<ul>
+			<li th:each="alias : ${list}" th:text="${alias}"></li>
+		</ul>
+		<hr />
+		<ul>
+			<li th:each="alias, vs : ${list}" th:text="${vs.index + '-' + vs.count + '. ' + alias}"></li>
+		</ul>
+		<hr />		
+		list[0] : [[${list[0]}]] <br />
+		list[3] : [[${list[3]}]] <br />
+		<hr />
+		<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>

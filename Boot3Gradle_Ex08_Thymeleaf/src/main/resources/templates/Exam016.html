@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>쉬운 Thymeleaf 템플릿</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<style type="text/css">
+		div {margin: 10px; padding: 15px; border: 1px solid gray; border-radius: 20px;}
+		table, td, th { border: 1px solid gray; padding: 5px;}
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			
+		});
+	</script>
+</head>
+<body>
+	<div>
+	<img src="/images/helloworld.jpg" alt="Hello World Logo" /> <br />
+	서버시간 : [(${today})] <br />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+	<div>
+	<!--/* 3.1.1에서는 사라짐 */-->
+	<h3><b>기본객체</b></h3>
+	${#request} : [[${#ctx.request}]] <br />
+	${#response} : [[${#ctx.response}]] <br />
+	${#session} : [[${#ctx.session}]] <br />
+	${#servletContext} : [[${#ctx.servletContext}]] <br />
+	${#locale} : [[${#ctx.locale}]] <br />
+	<hr />
+	<h3><b>영역의 변수 접근</b></h3>
+	${msg} : [[${msg}]] <br />
+	${req.getAttribute('msg')} : [[${req.getAttribute('msg')}]] <br />
+	${req.getAttribute('msg2')} : [[${req.getAttribute('msg2')}]] <br />
+	${req.getRemoteAddr()} : [[${req.getRemoteAddr()}]] <br />
+	${req.getRequestURI()} : [[${req.getRequestURI()}]] <br />
+	${req.getRequestURL()} : [[${req.getRequestURL()}]] <br />
+	${req.getContextPath()} : [[${req.getContextPath()}]] <br />
+	${session.msg} : [[${session.msg}]] <br />
+	${application.msg} : [[${application.msg}]] <br />
+	국가 코드 : [[${#locale.country}]] <br />
+	<hr />
+	<h3><b>기본객체에 대한 접근 편의 메서드</b></h3>
+	세션 : [[${session.msg}]]<br />
+	애플리케이션 : [[${application.msg}]]<br />
+	<!--/* 빈에 접근하기 */-->
+	빈접근 : [[${@helloBean.hello('Spring')}]]<br />
+	파라메터 접근 : [[${param.name}]], [[${param.age}]]
+	<hr />
+	<h3><b>application 영역</b></h3>
+	[[${application.size()}]] <br />
+	[[${application.isEmpty()}]] <br />
+	[[${application.containsKey('msg')}]] <br />
+	<h3><b>session 영역</b></h3>
+	[[${session.size()}]] <br />
+	[[${session.isEmpty()}]] <br />
+	[[${session.containsKey('msg')}]] <br />
+	<h3><b>파라메터 영역</b></h3>
+	[[${param.size()}]] <br />
+	[[${param.isEmpty()}]] <br />
+	[[${param.containsKey('msg')}]] <br />
+	<hr />
+	<a href="/" class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+
+</body>
+</html>
