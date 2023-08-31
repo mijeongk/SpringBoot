@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 반드시 DAO인터페이스와 일치해야 한다. -->
+<mapper namespace="kr.top2blue.memo.dao.MemoDAO">
+	<!-- 1. 모두 얻기 -->
+	<select id="selectAll" resultType="MemoVO">
+		select * from memo order by id desc
+	</select>
+	<!-- 2. 1개 얻기 -->
+	<select id="selectById" parameterType="int" resultType="MemoVO">
+		select * from memo where id=#{id}
+	</select>
+	<!-- 3. 저장하기 -->
+	<insert id="insert" parameterType="MemoVO">
+		insert into 
+		  memo 
+		values
+		 (memo_id_seq.nextval, #{name},#{password},#{content}, sysdate, #{ip})
+	</insert>
+	<!-- 4. 수정하기 -->
+	<update id="update" parameterType="MemoVO">
+		update 
+			memo
+		set
+			content = #{content}, regDate=sysdate, ip=#{ip}
+		where
+		 	id  = #{id}
+	</update>
+	<!-- 5. 삭제하기 -->
+	<delete id="delete" parameterType="int">
+		delete from memo where id=#{id}
+	</delete>
+</mapper>

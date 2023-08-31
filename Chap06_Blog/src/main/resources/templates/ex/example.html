@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	Person : [[${person}]] <br />
+	today  : [[${today}]] <br /> 
+	<hr/>
+	이름 : <span th:text="${person.name}">이름</span> <br />
+	나이 : [[${person.age}]] <br />
+	나이 : [[${person.getAge()}]] <br />
+	취미
+	<ul>
+		<li th:each="hobby : ${person.hobbies}">
+			[[${hobby}]]
+		</li>
+	</ul>
+	[[${person.hobbies[0]}]] <br />
+	[[${person.hobbies[1]}]] <br />
+	[[${person.hobbies[2]}]] <br />
+</body>
+</html>

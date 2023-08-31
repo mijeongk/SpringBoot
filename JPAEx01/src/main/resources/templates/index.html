@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>JPA Example</title>
+</head>
+<body>
+	<!-- 내용이 있다면 -->
+	<th:block th:if="${#lists.size(list) gt 0}">
+		<h2>[[${#lists.size(list)}]]명</h2>
+		<ul>
+			<li th:each="vo : ${list}">[[${vo}]]</li>
+		</ul>
+	</th:block>
+	<!-- 내용이 없다면 -->
+	<th:block th:if="${#lists.size(list) eq 0}">
+		저장된 내용이 없어요!!!
+	</th:block>
+	<hr />	
+	<form action="insertOk" method="post">
+		<input type="text" name="name" required placeholder="이름입력" />
+		<input type="text" name="dept" required placeholder="소속입력" />
+		<input type="submit" value="저장" />
+	</form>
+	<button onclick="location.href='/deleteAll'">모두지우기</button>
+</body>
+</html>

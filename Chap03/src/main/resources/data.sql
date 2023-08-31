@@ -1,0 +1,6 @@
+INSERT INTO member (id, name) VALUES (1, '이름1')
+INSERT INTO member (id, name) VALUES (2, '이름2')
+INSERT INTO member (id, name) VALUES (3, '이름3')
+INSERT INTO member (id, name) VALUES (4, '한사람')
+INSERT INTO member (id, name) VALUES (5, '두사람')
+INSERT INTO member (id, name) VALUES (6, '세사람')

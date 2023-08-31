@@ -1,0 +1,40 @@
+# 서버 포트 변경
+server:
+  port: 8080
+# 기본 에러페이지 사용하지 않겠다. 그러면 템플릿의 에러페이지가 실행된다.
+  error:
+    whitelabel:
+      enabled: false
+      
+# 자동 리로드
+spring:
+  devtools:
+    livereload:
+      enabled: true
+# JPA 설정
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+# resources폴더의 data.sql파일을 읽어서 자동으로 실행해라
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+  datasource:
+    # 메모리에 testdb라는 데이터메이스를 사용하겠다.
+    # url: jdbc:h2:mem:testdb
+    # 사용자 계정 폴더에 mydb라는 데이터베이스를 생성하라
+    url: jdbc:h2:~/mydb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  # h2databse 관리 화면을 사용하겠다. 주소가 /h2가 된다.  
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      

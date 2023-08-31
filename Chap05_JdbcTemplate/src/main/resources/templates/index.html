@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h2>DB 시간 String : [[${vo.today1}]]</h2>
+	<h2>DB 시간 Date : [[${vo.today2}]]</h2>
+	원하는 모양으로 날짜 출력하기 <br />
+	[[${#dates.format(vo.today2, 'yyyy년 MM월 dd일(EEEE)')}]] <br />
+	[[${#dates.format(vo.today2, 'yyyy년 MM월 dd일(EEEE) HH:mm:ss')}]] <br />
+
+</body>
+</html>

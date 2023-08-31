@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>블로그 글목록 보기</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+	<style>
+		
+	</style>
+	<script>
+		
+	</script>	
+</head>
+<body>
+	<div class="p-5 mb-5 text-center</> bg-light">
+        <h1 class="mb-3">My Blog</h1>
+        <h4 class="mb-3">블로그에 오신 것을 환영합니다.</h4>
+    </div>
+
+    <div class="container">
+        <button type="button" id="create-btn"
+                th:onclick="|location.href='@{/new-article}'|"
+                class="btn btn-secondary btn-sm mb-3">글 등록</button>
+        <div class="row-6" style="text-align: right; font-weight: bold;">
+			[[${#lists.size(list)}]] 개의 글이 있습니다. <!-- 글의 개수 출력 -->
+		</div>        
+		<div class="row-6" th:each="item : ${list}"> <!-- 저장된 내용을 반복한다. -->
+			<div class="card">
+				<div class="card-header">[[${item.id}]]</div>
+				<div class="card-body">
+					<div class="card-title">[[${item.title}]]</div>
+					<div class="card-text">[[${item.content}]]</div>
+					<a th:href="@{articles/{id}(id=${item.id})}" class="btn btn-success btn-sm mb-3">보러가기</a>
+				</div>
+			</div>
+			<br />
+		</div>                
+	</div>                
+</body>
+</html>

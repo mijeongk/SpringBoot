@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 반드시 DAO인터페이스와 일치해야 한다. -->
+<mapper namespace="kr.top2blue.chap05.dao.TestDAO">
+	<!-- SQL명령을 태그로 기술한다. -->
+	<select id="selectToday" resultType="string" >
+		select sysdate from dual
+	</select>
+	<!-- 쿼리중에 바뀌는 부분은 #{변수명}으로 표시한다. -->
+	<select id="selectSum" parameterType="hashmap" resultType="int">
+		select #{num1} + #{num2} from dual
+	</select>
+</mapper>
