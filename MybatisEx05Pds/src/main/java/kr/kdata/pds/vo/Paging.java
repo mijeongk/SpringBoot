@@ -121,13 +121,14 @@ public class Paging<T> {
 				+ ", endNo=" + endNo + ", startPage=" + startPage + ", endPage=" + endPage + "]";
 	}
 	
-
+	/*
 	public static void main(String[] args) {
 		Paging<String> paging = new Paging<>(123, 13, 10, 10);
 		System.out.println(paging);
 		System.out.println(paging.getPageInfo());
 		System.out.println(paging.getPageList());
 	}
+	*/
 	
 	// 메서드 2개를 추가해보자
 	// 상단에 페이지 정보를 출력해주는 메서드

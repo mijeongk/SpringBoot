@@ -195,6 +195,41 @@ public class PdsController {
 		return "redirect:/pds/list?p=1&b=" + cv.getB() + "&s=" + cv.getS();
 	}
 
+	// 삭제하기
+	// 삭제하기 폼
+	@GetMapping(value = "/delete")
+	public String deleteForm(@ModelAttribute CommVO cv, Model model) {
+		Board2VO vo = board2Service.selectById(cv.getId(), cv.getMode());
+		if (vo == null) { // 글이 존재하지 않으면 리스트로
+			return "redirect:/pds/list?p=1&b=" + cv.getB() + "&s=" + cv.getS();
+		}
+		// 존재하면 내용보기로
+		model.addAttribute("board", vo);
+		model.addAttribute("cv", cv);
+		return "board/delete";
+	}
+	// 삭제하기 완료
+	@GetMapping(value = "/deleteOk")
+	public String deleteOkGet() {
+		return "redirect:/pds/list";
+	}
+
+	@PostMapping(value = "/deleteOk")
+	public String deleteOkPost(@ModelAttribute CommVO cv, // 페이지 정보
+			@ModelAttribute Board2VO vo // 글 내용
+			) throws IOException {
+		// 서비스를 호출하여 실제로 DB에 삭제를 해주자!!!
+		if (board2Service.delete(vo, getFilePath())) {
+			log.info("삭제 성공!!!!");
+		} else {
+			log.info("삭제 실패!!!!");
+		}
+		return "redirect:/pds/list?p=1&b=" + cv.getB() + "&s=" + cv.getS();
+	}
+
+	
+	
+	
 	// 파일을 다운로드할 메서드
 	@GetMapping(value = "/download")
 	public ResponseEntity<Resource> download(@ModelAttribute Board2FileVO vo) throws IOException {

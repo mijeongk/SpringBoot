@@ -23,3 +23,6 @@ CREATE TABLE board2file(
 	filename varchar2(200) NOT NULL, -- 원본 파일명
 	contentType varchar2(200) NOT NULL -- 파일 종류
 );
+
+DELETE FROM board2 b;
+DELETE FROM board2file;
