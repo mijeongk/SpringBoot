@@ -40,9 +40,9 @@ public class HanjaService {
 	
 	// 지정급수, 지정 횟수를 받아 해당 문제만 가져오기
 	public List<HanjaVO> getList(String find){
-		Set<HanjaVO> set = new TreeSet<>(); // 정렬을 지원하면서 중복제거하는 자료 // hashset은 중복만 제공
+		Set<HanjaVO> set = new TreeSet<>(); // 정렬을 지원하면서 중복을 제거하는 자료구조
 		for(HanjaVO vo : getAll()) {
-			if(find.equals(vo.getD()+" " + vo.getS())) {				
+			if(find.equals(vo.getD()+" " + vo.getS())) {
 				set.add(vo);
 			}
 		}

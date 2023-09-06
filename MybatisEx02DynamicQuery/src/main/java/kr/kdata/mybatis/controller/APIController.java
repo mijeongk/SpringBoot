@@ -19,8 +19,11 @@ public class APIController {
 	private EmpService empService;
 	
 	@GetMapping(value = "/all")
-	public List<EmpVO> selectAll(@RequestParam(defaultValue = "")Integer no){
-		return empService.selectAll(no);
+	public List<EmpVO> selectAll(
+			@RequestParam(defaultValue = "")Integer no,
+			@RequestParam(defaultValue = "")String job
+			){
+		return empService.selectAll(no, job);
 	}
 	
 	@GetMapping(value = "/deptNo")

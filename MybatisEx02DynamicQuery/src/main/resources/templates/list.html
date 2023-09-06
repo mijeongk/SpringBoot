@@ -35,9 +35,12 @@ td{
 }
 </style>
 <script type="text/javascript">
-	function changeList(obj){
+	function changeList(){
 		// alert('선택한 값 : ' + obj.value);
-		location.href = '?no=' + obj.value;
+		let no = document.querySelector("#deptNo").value;
+		let job = document.querySelector("#job").value;
+		// alert(no + "\n" + job);
+		location.href = '?no=' + no + "&job=" + job;
 	}
 </script>
 </head>
@@ -56,7 +59,13 @@ td{
 		</tr>
 		<tr>
 			<td colspan="5" style="text-align: right;border: none;">
-				<select name="deptNo" id="deptNo" onchange="changeList(this)">
+				직업 :
+				<select name="job" id="job" onchange="changeList()">
+					<option th:selected="${job==null}" value="">전체</option>
+					<option th:each="d : ${jobs}" th:value="${d}" th:selected="${job}==${d}">[[${d}]]</option>
+				</select>
+				부서 : 
+				<select name="deptNo" id="deptNo" onchange="changeList()">
 					<option th:selected="${no==null}" value="">전체</option>
 					<option th:each="d : ${dept}" th:value="${d}" th:selected="${no}==${d}">[[${d}]]번 부서</option>
 				</select>

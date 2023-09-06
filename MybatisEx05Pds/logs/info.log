@@ -37065,3 +37065,520 @@ rownum <= 1 ) Q where rnum >= 1  {executed in 0 ms}
 [23-09-05 09:54:44] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
 [23-09-05 09:54:44] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
 [23-09-05 09:54:44] INFO  k.k.pds.service.Board2ServiceImpl - selectList(1,10,10) 리턴 :
+[23-09-05 10:03:50] INFO  k.k.pds.service.Board2ServiceImpl - selectList(1,10,10) 호출!!!
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. Connection.isValid(5) returned true
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select count(*) from board2) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5e71ec2e
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. select count(*) from board2  {executed in 0 ms}
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@6b06f293
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@161dfa7d
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(COUNT(*)) returned 0
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.wasNull() returned false
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|0        |
+|---------|
+
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:03:50] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:03:50] INFO  k.k.pds.service.Board2ServiceImpl - selectList(1,10,10) 리턴 :
+[23-09-05 10:03:57] INFO  k.k.pds.controller.PdsController - 서버 절대 경로 : C:/Users/admin/AppData/Local/Temp/tomcat-docbase.8080.9724969408543324339/upload/
+[23-09-05 10:03:57] INFO  k.k.pds.service.Board2ServiceImpl - insert(Board2VO(id=0, name=한사람, password=1234, subject=dfasd, content=asdasdsad, regDate=null, readCount=0, ip=127.0.0.1, fileList=[])) 호출!!!
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.isValid(5) returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(insert into board2 values
+		(board2_id_seq.nextval, ?,?,?,?,sysdate,0,?)) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5c741b85
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(1, "한사람") returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(2, "1234") returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(3, "dfasd") returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(4, "asdasdsad") returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(5, "127.0.0.1") returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. insert into board2 values (board2_id_seq.nextval, '한사람','1234','dfasd','asdasdsad',sysdate,0,'127.0.0.1')  {executed in 0 ms}
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getUpdateCount() returned 1
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:03:57] INFO  k.k.pds.service.Board2ServiceImpl - insert(Board2VO(id=0, name=한사람, password=1234, subject=dfasd, content=asdasdsad, regDate=null, readCount=0, ip=127.0.0.1, fileList=[])) 리턴 : false !!!
+[23-09-05 10:03:57] INFO  k.k.pds.controller.PdsController - 저장 실패!!!!
+[23-09-05 10:03:57] INFO  k.k.pds.service.Board2ServiceImpl - selectList(1,10,10) 호출!!!
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select count(*) from board2) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@2bedfd0a
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. select count(*) from board2  {executed in 1 ms}
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@4dc512a8
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@246ebc63
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(COUNT(*)) returned 1
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|1        |
+|---------|
+
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select 
+			Q.*
+		from
+			(select
+				rownum rnum, R.*
+			from
+				(select * from board2 order by id desc) R
+			where
+				 
+					rownum <= ?
+				 
+			) Q
+		where
+			 
+				rnum >= ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1c7b90f8
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 1) returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(2, 1) returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. select Q.* from (select rownum rnum, R.* from (select * from board2 order by id desc) R where 
+rownum <= 1 ) Q where rnum >= 1  {executed in 1 ms}
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@794e818d
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@2892b763
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(ID) returned 15
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(NAME) returned 한사람
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(PASSWORD) returned 1234
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(SUBJECT) returned dfasd
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(CONTENT) returned asdasdsad
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getTimestamp(REGDATE) returned 2023-09-05 10:03:57.0
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(READCOUNT) returned 0
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.wasNull() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(IP) returned 127.0.0.1
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 
+|---------|---|-----|---------|--------|----------|----------------------|----------|----------|
+|rnum     |id |name |password |subject |content   |regdate               |readcount |ip        |
+|---------|---|-----|---------|--------|----------|----------------------|----------|----------|
+|[unread] |15 |한사람  |1234     |dfasd   |asdasdsad |2023-09-05 10:03:57.0 |0         |127.0.0.1 |
+|---------|---|-----|---------|--------|----------|----------------------|----------|----------|
+
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select * from board2file where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5d29b333
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. select * from board2file where ref=15  {executed in 1 ms}
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@2744fd96
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4828c0f1
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 
+|---|----|-----|---------|------------|
+|id |ref |uuid |filename |contenttype |
+|---|----|-----|---------|------------|
+|---|----|-----|---------|------------|
+
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:03:57] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:03:57] INFO  k.k.pds.service.Board2ServiceImpl - selectList(1,10,10) 리턴 :
+[23-09-05 10:03:59] INFO  k.k.pds.service.Board2ServiceImpl - selectById(15,1) 호출!!!
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.isValid(5) returned true
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select * from board2 where id=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3f57090f
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. select * from board2 where id=15  {executed in 1 ms}
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@55040d04
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@727b807
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(ID) returned 15
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(NAME) returned 한사람
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(PASSWORD) returned 1234
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(SUBJECT) returned dfasd
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(CONTENT) returned asdasdsad
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getTimestamp(REGDATE) returned 2023-09-05 10:03:57.0
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(READCOUNT) returned 0
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.wasNull() returned false
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(IP) returned 127.0.0.1
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 
+|---|-----|---------|--------|----------|----------------------|----------|----------|
+|id |name |password |subject |content   |regdate               |readcount |ip        |
+|---|-----|---------|--------|----------|----------------------|----------|----------|
+|15 |한사람  |1234     |dfasd   |asdasdsad |2023-09-05 10:03:57.0 |0         |127.0.0.1 |
+|---|-----|---------|--------|----------|----------------------|----------|----------|
+
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(update board2 set readCount = readCount + 1 where id=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@11c81fb1
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. update board2 set readCount = readCount + 1 where id=15  {executed in 1 ms}
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned false
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getUpdateCount() returned 1
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select * from board2file where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6443074b
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. select * from board2file where ref=15  {executed in 0 ms}
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@6bea7f58
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4635a915
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 
+|---|----|-----|---------|------------|
+|id |ref |uuid |filename |contenttype |
+|---|----|-----|---------|------------|
+|---|----|-----|---------|------------|
+
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:03:59] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:03:59] INFO  k.k.pds.service.Board2ServiceImpl - selectById(15,1) 리턴 : Board2VO(id=15, name=한사람, password=1234, subject=dfasd, content=asdasdsad, regDate=Tue Sep 05 10:03:57 KST 2023, readCount=1, ip=127.0.0.1, fileList=[])
+[23-09-05 10:04:01] INFO  k.k.pds.service.Board2ServiceImpl - selectById(15,0) 호출!!!
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. Connection.isValid(5) returned true
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select * from board2 where id=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@52b0fd9c
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. select * from board2 where id=15  {executed in 0 ms}
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@cc43e70
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@62d1d1b5
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(ID) returned 15
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(NAME) returned 한사람
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(PASSWORD) returned 1234
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(SUBJECT) returned dfasd
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(CONTENT) returned asdasdsad
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getTimestamp(REGDATE) returned 2023-09-05 10:03:57.0
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(READCOUNT) returned 1
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(IP) returned 127.0.0.1
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 
+|---|-----|---------|--------|----------|----------------------|----------|----------|
+|id |name |password |subject |content   |regdate               |readcount |ip        |
+|---|-----|---------|--------|----------|----------------------|----------|----------|
+|15 |한사람  |1234     |dfasd   |asdasdsad |2023-09-05 10:03:57.0 |1         |127.0.0.1 |
+|---|-----|---------|--------|----------|----------------------|----------|----------|
+
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select * from board2file where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@106d1c25
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. select * from board2file where ref=15  {executed in 0 ms}
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@54cbf602
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@73b8b21d
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 
+|---|----|-----|---------|------------|
+|id |ref |uuid |filename |contenttype |
+|---|----|-----|---------|------------|
+|---|----|-----|---------|------------|
+
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:01] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:01] INFO  k.k.pds.service.Board2ServiceImpl - selectById(15,0) 리턴 : Board2VO(id=15, name=한사람, password=1234, subject=dfasd, content=asdasdsad, regDate=Tue Sep 05 10:03:57 KST 2023, readCount=1, ip=127.0.0.1, fileList=[])
+[23-09-05 10:04:10] INFO  k.k.pds.controller.PdsController - 서버 절대 경로 : C:/Users/admin/AppData/Local/Temp/tomcat-docbase.8080.9724969408543324339/upload/
+[23-09-05 10:04:10] INFO  k.k.pds.service.Board2ServiceImpl - update(Board2VO(id=15, name=한사람, password=1234, subject=dfasd, content=asdasdsad, regDate=null, readCount=0, ip=127.0.0.1, fileList=[Board2FileVO(id=0, ref=15, uuid=99091dc1-2375-4ed2-aa8a-f21bb24e7bc9, fileName=스크린샷(1).png, contentType=image/png)]),,C:/Users/admin/AppData/Local/Temp/tomcat-docbase.8080.9724969408543324339/upload/) 호출!!!
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.isValid(5) returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(update board2 set
+		subject = ?, content=?, regdate=sysdate, ip=?
+		where id = ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1e020f22
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(1, "dfasd") returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(2, "asdasdsad") returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(3, "127.0.0.1") returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(4, 15) returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. update board2 set subject = 'dfasd', content='asdasdsad', regdate=sysdate, ip='127.0.0.1' where 
+id = 15  {executed in 204 ms}
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getUpdateCount() returned 1
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(insert into 
+			board2file
+		values
+			(board2file_id_seq.nextval, ?,?,?,?)) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6b6461e6
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(2, "99091dc1-2375-4ed2-aa8a-f21bb24e7bc9") returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(3, "스크린샷(1).png") returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setString(4, "image/png") returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. insert into board2file values (board2file_id_seq.nextval, 15,'99091dc1-2375-4ed2-aa8a-f21bb24e7bc9','스크린샷(1).png','image/png')  {executed in 4 ms}
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getUpdateCount() returned 1
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:10] INFO  k.k.pds.service.Board2ServiceImpl - update(Board2VO(id=15, name=한사람, password=1234, subject=dfasd, content=asdasdsad, regDate=null, readCount=0, ip=127.0.0.1, fileList=[Board2FileVO(id=0, ref=15, uuid=99091dc1-2375-4ed2-aa8a-f21bb24e7bc9, fileName=스크린샷(1).png, contentType=image/png)]),,C:/Users/admin/AppData/Local/Temp/tomcat-docbase.8080.9724969408543324339/upload/) 리턴 : false !!!
+[23-09-05 10:04:10] INFO  k.k.pds.controller.PdsController - 수정 실패!!!!
+[23-09-05 10:04:10] INFO  k.k.pds.service.Board2ServiceImpl - selectList(1,10,10) 호출!!!
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select count(*) from board2) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@76d378df
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. select count(*) from board2  {executed in 1 ms}
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@700b6636
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@7e7e1c0a
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(COUNT(*)) returned 1
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|1        |
+|---------|
+
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select 
+			Q.*
+		from
+			(select
+				rownum rnum, R.*
+			from
+				(select * from board2 order by id desc) R
+			where
+				 
+					rownum <= ?
+				 
+			) Q
+		where
+			 
+				rnum >= ?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5ba5bae6
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 1) returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(2, 1) returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. select Q.* from (select rownum rnum, R.* from (select * from board2 order by id desc) R where 
+rownum <= 1 ) Q where rnum >= 1  {executed in 0 ms}
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@70345d72
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@7ea49132
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(ID) returned 15
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(NAME) returned 한사람
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(PASSWORD) returned 1234
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(SUBJECT) returned dfasd
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(CONTENT) returned asdasdsad
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getTimestamp(REGDATE) returned 2023-09-05 10:04:10.0
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(READCOUNT) returned 1
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(IP) returned 127.0.0.1
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 
+|---------|---|-----|---------|--------|----------|----------------------|----------|----------|
+|rnum     |id |name |password |subject |content   |regdate               |readcount |ip        |
+|---------|---|-----|---------|--------|----------|----------------------|----------|----------|
+|[unread] |15 |한사람  |1234     |dfasd   |asdasdsad |2023-09-05 10:04:10.0 |1         |127.0.0.1 |
+|---------|---|-----|---------|--------|----------|----------------------|----------|----------|
+
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select * from board2file where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@20db99dd
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. select * from board2file where ref=15  {executed in 0 ms}
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@942d7bd
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@548b2930
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(ID) returned 24
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(REF) returned 15
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(UUID) returned 99091dc1-2375-4ed2-aa8a-f21bb24e7bc9
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(FILENAME) returned 스크린샷(1).png
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(CONTENTTYPE) returned image/png
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 
+|---|----|-------------------------------------|------------|------------|
+|id |ref |uuid                                 |filename    |contenttype |
+|---|----|-------------------------------------|------------|------------|
+|24 |15  |99091dc1-2375-4ed2-aa8a-f21bb24e7bc9 |스크린샷(1).png |image/png   |
+|---|----|-------------------------------------|------------|------------|
+
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:10] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:10] INFO  k.k.pds.service.Board2ServiceImpl - selectList(1,10,10) 리턴 :
+[23-09-05 10:04:14] INFO  k.k.pds.service.Board2ServiceImpl - selectById(15,1) 호출!!!
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.isValid(5) returned true
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select * from board2 where id=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@21d1827d
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. select * from board2 where id=15  {executed in 1 ms}
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@77b07b20
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4c19e2cf
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(ID) returned 15
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(NAME) returned 한사람
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(PASSWORD) returned 1234
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(SUBJECT) returned dfasd
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(CONTENT) returned asdasdsad
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getTimestamp(REGDATE) returned 2023-09-05 10:04:10.0
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(READCOUNT) returned 1
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(IP) returned 127.0.0.1
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 
+|---|-----|---------|--------|----------|----------------------|----------|----------|
+|id |name |password |subject |content   |regdate               |readcount |ip        |
+|---|-----|---------|--------|----------|----------------------|----------|----------|
+|15 |한사람  |1234     |dfasd   |asdasdsad |2023-09-05 10:04:10.0 |1         |127.0.0.1 |
+|---|-----|---------|--------|----------|----------------------|----------|----------|
+
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(update board2 set readCount = readCount + 1 where id=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@65bc4741
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. update board2 set readCount = readCount + 1 where id=15  {executed in 1 ms}
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned false
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getUpdateCount() returned 1
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.getAutoCommit() returned true
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.new PreparedStatement returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.prepareStatement(select * from board2file where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1796683f
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.setInt(1, 15) returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. select * from board2file where ref=15  {executed in 0 ms}
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.execute() returned true
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.new ResultSet returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@16ade0a7
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@7353bd04
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getType() returned 1003
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned true
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(ID) returned 24
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getInt(REF) returned 15
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(UUID) returned 99091dc1-2375-4ed2-aa8a-f21bb24e7bc9
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(FILENAME) returned 스크린샷(1).png
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.getString(CONTENTTYPE) returned image/png
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.isClosed() returned false
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 
+|---|----|-------------------------------------|------------|------------|
+|id |ref |uuid                                 |filename    |contenttype |
+|---|----|-------------------------------------|------------|------------|
+|24 |15  |99091dc1-2375-4ed2-aa8a-f21bb24e7bc9 |스크린샷(1).png |image/png   |
+|---|----|-------------------------------------|------------|------------|
+
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.next() returned false
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. ResultSet.close() returned void
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@39d76110
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. PreparedStatement.close() returned 
+[23-09-05 10:04:14] INFO  log4jdbc.log4j2 - 121. Connection.clearWarnings() returned 
+[23-09-05 10:04:14] INFO  k.k.pds.service.Board2ServiceImpl - selectById(15,1) 리턴 : Board2VO(id=15, name=한사람, password=1234, subject=dfasd, content=asdasdsad, regDate=Tue Sep 05 10:04:10 KST 2023, readCount=2, ip=127.0.0.1, fileList=[Board2FileVO(id=24, ref=15, uuid=99091dc1-2375-4ed2-aa8a-f21bb24e7bc9, fileName=스크린샷(1).png, contentType=image/png)])
+[23-09-05 10:16:09] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[23-09-05 10:16:09] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[23-09-05 10:16:09] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[23-09-05 10:16:09] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[23-09-05 10:16:09] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[23-09-05 10:16:09] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+[23-09-05 10:16:09] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 121. Connection closed. {executed in 0ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 121. Connection.close() returned 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 122. Connection closed. {executed in 0ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 122. Connection.close() returned 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 123. Connection closed. {executed in 0ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 123. Connection.close() returned 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 124. Connection closed. {executed in 1ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 124. Connection.close() returned 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 125. Connection closed. {executed in 0ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 125. Connection.close() returned 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 126. Connection closed. {executed in 1ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 126. Connection.close() returned 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 127. Connection closed. {executed in 1ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 127. Connection.close() returned 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 128. Connection closed. {executed in 0ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 128. Connection.close() returned 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 129. Connection closed. {executed in 1ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 129. Connection.close() returned 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 130. Connection closed. {executed in 0ms} 
+[23-09-05 10:16:09] INFO  log4jdbc.log4j2 - 130. Connection.close() returned 
+[23-09-05 10:16:09] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.

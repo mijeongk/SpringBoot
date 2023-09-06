@@ -12,7 +12,7 @@
 		 반드시  CDATA Section으로 감싸줘야 한다.
 	 -->
 	<!-- 전체 내용을 모두 가져오는 쿼리 --> 
-	<select id="selectAll" resultType="EmpVO" parameterType="int">
+	<select id="selectAll" resultType="EmpVO" parameterType="hashmap">
 		SELECT 
 			EMPLOYEE_ID ID, 
 			FIRST_NAME || ' ' || LAST_NAME NAME,
@@ -22,8 +22,11 @@
 		FROM 
 			EMPLOYEES	 
 		<where>
-			<if test="id != null">
+			<if test="id != ''">
 			    AND DEPARTMENT_ID = #{id}
+			</if>
+			<if test="job != ''">
+			    AND JOB_ID = #{job}
 			</if>
 		</where>
 	</select>
@@ -38,5 +41,16 @@
 			DEPARTMENT_ID IS NOT NULL 
 		ORDER BY 1
 	</select>
+	
+	<!-- 존재하는 직업 모두 보기 -->
+	<select id="selectJobs" resultType="string">
+		SELECT 
+			DISTINCT JOB_ID 
+		FROM
+			EMPLOYEES e
+		order by
+			1 
+	</select>
+	
 	
 </mapper>

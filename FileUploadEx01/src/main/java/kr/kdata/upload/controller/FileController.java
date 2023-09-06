@@ -165,7 +165,7 @@ public class FileController {
 	public ResponseEntity<Resource> download(@ModelAttribute FileVO vo) throws IOException{
 		
 		filePath = resourceLoader.getResource("/").getURI().toString() + "upload/";
-		filePath = filePath.substring(6); // 앞의 6자리("file:/)를 버린다.
+		filePath = filePath.substring(6);
 		File f = new File(filePath); // 파일 객체 생성
 		if(!f.exists()) f.mkdirs(); // 파일(폴더)이 존재하지 않으면 폴더를 생성한다. 
 		

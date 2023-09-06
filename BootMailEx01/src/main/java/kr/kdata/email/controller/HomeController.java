@@ -14,4 +14,10 @@ public class HomeController {
 		model.addAttribute("serverTime", new Date());
 		return "/index";
 	}
+
+	// 우편번호 예제
+	@GetMapping(value = {"/post"})
+	public String post() {
+		return "/post";
+	}
 }

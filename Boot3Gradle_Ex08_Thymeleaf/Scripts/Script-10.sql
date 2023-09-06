@@ -1,4 +1,0 @@
-
-
-SELECT * FROM board;
-SELECT * FROM BCOMMENT;

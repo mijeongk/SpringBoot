@@ -28,6 +28,7 @@ public class MailHandler {
 		// 첫번째 인수는 MimeMessage객체 두번째는 다수의 사람에게 보내기 가능여부 세번째는 인코딩
 		messageHelper = new MimeMessageHelper(message, true, "UTF-8");
 	}
+	
 	// 보내는 사람 지정
 	public void setFrom(String email, String name) throws UnsupportedEncodingException, MessagingException {
 		messageHelper.setFrom(email, name);

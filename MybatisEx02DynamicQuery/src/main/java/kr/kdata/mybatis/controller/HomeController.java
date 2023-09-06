@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.kdata.mybatis.service.EmpService;
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
+@Slf4j
 public class HomeController {
 
 	@Autowired
@@ -29,10 +31,16 @@ public class HomeController {
 	}
 	
 	@GetMapping("/list")
-	public String list(@RequestParam(defaultValue = "")Integer no, Model model) {
-		model.addAttribute("list", empService.selectAll(no));
+	public String list(
+			@RequestParam(defaultValue = "")Integer no, 
+			@RequestParam(defaultValue = "")String job, 
+			Model model) {
+		log.info("컨트롤러의 list 호출 : {}, {}", no, job);
+		model.addAttribute("list", empService.selectAll(no, job));
 		model.addAttribute("dept", empService.selectDeptNo());
+		model.addAttribute("jobs", empService.selectJobs());
 		model.addAttribute("no", no);
+		model.addAttribute("job", job);
 		return "list";
 	}
 }

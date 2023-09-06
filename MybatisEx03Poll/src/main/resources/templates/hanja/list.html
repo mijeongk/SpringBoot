@@ -69,7 +69,7 @@ td{
 				<b style="font-size: 15pt;">[[${find}]] 시험보기</b> 
 				<hr />
 				<form action="/hanja/result" method="post">
-					<input type="hidden" name="find" th:value="${find}">
+					<input type="hidden" name="find" th:value="${find}" />
 					<div th:each="q, status : ${question}" style="text-align: left;">
 						[[${q.n}]]. [[${q.q}]]
 						<div th:if="${q.e1 ne ''}">
