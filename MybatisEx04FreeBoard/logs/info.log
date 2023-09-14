@@ -34439,3 +34439,540 @@ gfdsgfd
 [23-09-01 17:18:24] INFO  log4jdbc.log4j2 - 870. Connection closed. {executed in 0ms} 
 [23-09-01 17:18:24] INFO  log4jdbc.log4j2 - 870. Connection.close() returned 
 [23-09-01 17:18:24] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-82 - Shutdown completed.
+[23-09-14 15:40:56] INFO  k.k.b.MybatisEx04FreeBoardApplication - Starting MybatisEx04FreeBoardApplication using Java 17.0.7 with PID 13788 (C:\Users\admin\git\SpringBoot\MybatisEx04FreeBoard\target\classes started by admin in C:\Users\admin\git\SpringBoot\MybatisEx04FreeBoard)
+[23-09-14 15:40:56] INFO  k.k.b.MybatisEx04FreeBoardApplication - The following 1 profile is active: "local"
+[23-09-14 15:40:56] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\admin\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.9.0.0\ojdbc8-21.9.0.0.jar referenced one or more files that do not exist: file:/C:/Users/admin/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.9.0.0/oraclepki.jar
+[23-09-14 15:40:56] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[23-09-14 15:40:56] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[23-09-14 15:40:57] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+[23-09-14 15:40:57] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 JDBC repository interfaces.
+[23-09-14 15:40:57] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+[23-09-14 15:40:57] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[23-09-14 15:40:57] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+[23-09-14 15:40:57] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+[23-09-14 15:40:57] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[23-09-14 15:40:57] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1175 ms
+[23-09-14 15:40:58] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+[23-09-14 15:40:58] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 1. Connection opened. {executed in 176ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 1. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 1. Connection.getNetworkTimeout() returned 0
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 1. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 1. Connection.isValid(1) returned true
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 1. Connection.getTransactionIsolation() returned 2
+[23-09-14 15:40:58] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4e2cde25
+[23-09-14 15:40:58] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:40:58] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 2. Connection opened. {executed in 15ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 2. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 2. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 2. Connection.getAutoCommit() returned true
+[23-09-14 15:40:58] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[23-09-14 15:40:58] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 3. Connection opened. {executed in 15ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 3. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 3. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 3. Connection.getAutoCommit() returned true
+[23-09-14 15:40:58] INFO  k.k.b.MybatisEx04FreeBoardApplication - Started MybatisEx04FreeBoardApplication in 2.538 seconds (process running for 3.32)
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 4. Connection opened. {executed in 12ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 4. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 4. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 4. Connection.getAutoCommit() returned true
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 5. Connection opened. {executed in 12ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 5. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 5. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 5. Connection.getAutoCommit() returned true
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 6. Connection opened. {executed in 12ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 6. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 6. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 6. Connection.getAutoCommit() returned true
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 7. Connection opened. {executed in 12ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 7. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 7. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 7. Connection.getAutoCommit() returned true
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 8. Connection opened. {executed in 13ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 8. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 8. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 8. Connection.getAutoCommit() returned true
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 9. Connection opened. {executed in 12ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 9. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 9. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 9. Connection.getAutoCommit() returned true
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 10. Connection opened. {executed in 12ms} 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 10. Connection.new Connection returned 
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 10. Connection.isReadOnly() returned false
+[23-09-14 15:40:58] INFO  log4jdbc.log4j2 - 10. Connection.getAutoCommit() returned true
+[23-09-14 15:40:59] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[23-09-14 15:40:59] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[23-09-14 15:40:59] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. Connection.isValid(5) returned true
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. Statement.new Statement returned 
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@42c83b99
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. select sysdate from dual  {executed in 43 ms}
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. Statement.executeQuery(select sysdate from dual) returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@a1f52a3
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@32197d79
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(1) returned 2023-09-14 15:40:59.0
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 
+|----------------------|
+|sysdate               |
+|----------------------|
+|2023-09-14 15:40:59.0 |
+|----------------------|
+
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. Statement.close() returned 
+[23-09-14 15:40:59] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  k.k.board.service.BoardServiceImpl - selectList 호출 : 0,0,0
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.isValid(5) returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from board) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@14f4011f
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from board  {executed in 14 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@b405db5
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@70a4e3ef
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 257
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|257      |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select
+			Q.*
+		from
+			(select 
+				rownum rnum, R.*
+			from
+				(select * from board order by id desc) R  -- 먼저 글을 번호 역순으로 가져오고
+			where
+				 
+					rownum <= ? -- 뒷자리 잘라내고
+				 
+			) Q
+		where
+			 
+			rnum >= ? -- 앞자리 잘라내고) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4af3f888
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 10) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(2, 1) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select Q.* from (select rownum rnum, R.* from (select * from board order by id desc) R -- 먼저 
+글을 번호 역순으로 가져오고 where rownum <= 10 -- 뒷자리 잘라내고 ) Q where rnum >= 1 -- 앞자리 잘라내고  {executed in 12 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1dc1d171
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@78f6879
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20422
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned 배부르고 졸리고
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned 123
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned 자고싶다
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned 놀고싶다
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-09-01 13:59:47.0
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20421
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned qqqq
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned qqqq
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned qqqq
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned qqqq
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-09-01 13:59:06.0
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20405
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned 주인장255
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned 12345
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned 제목이야 255
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned 내용이야 255
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-08-25 16:04:47.239
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20404
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned 주인장254
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned 12345
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned 제목이야 254
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned 내용이야 254
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-08-25 16:04:47.239
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20403
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned 주인장253
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned 12345
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned 제목이야 253
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned 내용이야 253
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-08-25 16:04:47.238
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20402
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned 주인장252
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned 12345
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned 제목이야 252
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned 내용이야 252
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-08-25 16:04:47.237
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20401
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned 주인장251
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned 12345
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned 제목이야 251
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned 내용이야 251
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-08-25 16:04:47.236
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20400
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned 주인장250
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned 12345
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned 제목이야 250
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned 내용이야 250
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-08-25 16:04:47.236
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20399
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned 주인장249
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned 12345
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned 제목이야 249
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned 내용이야 249
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-08-25 16:04:47.234
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(ID) returned 20398
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(NAME) returned 주인장248
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(PASSWORD) returned 12345
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(SUBJECT) returned 제목이야 248
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getString(CONTENT) returned 내용이야 248
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getTimestamp(REGDATE) returned 2023-08-25 16:04:47.234
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|------|---------|---------|---------|---------|------------------------|
+|rnum     |id    |name     |password |subject  |content  |regdate                 |
+|---------|------|---------|---------|---------|---------|------------------------|
+|[unread] |20422 |배부르고 졸리고 |123      |자고싶다     |놀고싶다     |2023-09-01 13:59:47.0   |
+|[unread] |20421 |qqqq     |qqqq     |qqqq     |qqqq     |2023-09-01 13:59:06.0   |
+|[unread] |20405 |주인장255   |12345    |제목이야 255 |내용이야 255 |2023-08-25 16:04:47.239 |
+|[unread] |20404 |주인장254   |12345    |제목이야 254 |내용이야 254 |2023-08-25 16:04:47.239 |
+|[unread] |20403 |주인장253   |12345    |제목이야 253 |내용이야 253 |2023-08-25 16:04:47.238 |
+|[unread] |20402 |주인장252   |12345    |제목이야 252 |내용이야 252 |2023-08-25 16:04:47.237 |
+|[unread] |20401 |주인장251   |12345    |제목이야 251 |내용이야 251 |2023-08-25 16:04:47.236 |
+|[unread] |20400 |주인장250   |12345    |제목이야 250 |내용이야 250 |2023-08-25 16:04:47.236 |
+|[unread] |20399 |주인장249   |12345    |제목이야 249 |내용이야 249 |2023-08-25 16:04:47.234 |
+|[unread] |20398 |주인장248   |12345    |제목이야 248 |내용이야 248 |2023-08-25 16:04:47.234 |
+|---------|------|---------|---------|---------|---------|------------------------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3e0bef76
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20422) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20422  {executed in 24 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@25a01291
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@128f3b70
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 2
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|2        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@17274779
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20421) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20421  {executed in 1 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@32b6eb96
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@5909120b
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 2
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|2        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@317fcd95
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20405) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20405  {executed in 1 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@34907a77
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@2518afa4
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 2
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|2        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@40b786a
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20404) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20404  {executed in 0 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@33ffe95e
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@537a050a
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 2
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|2        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@7f7614cc
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20403) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20403  {executed in 0 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@330fa765
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@305ea65b
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 0
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.wasNull() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|0        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@500b0278
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20402) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20402  {executed in 0 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1e71b393
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@5bd8a278
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 1
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|1        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@69cfe785
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20401) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20401  {executed in 1 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@7ab12c04
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@64649a48
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 0
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.wasNull() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|0        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6a4ef30e
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20400) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20400  {executed in 1 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@19ec234f
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@599a4ce0
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 0
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.wasNull() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|0        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@66def8a5
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20399) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20399  {executed in 0 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1e50496a
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@15a6eb0c
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 0
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.wasNull() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|0        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getAutoCommit() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.new PreparedStatement returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.prepareStatement(select count(*) from bcomment where ref=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@527d4f0b
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.setInt(1, 20398) returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. select count(*) from bcomment where ref=20398  {executed in 0 ms}
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.execute() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.new ResultSet returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@4e7a5737
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@6c263b7f
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getType() returned 1003
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned true
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.getInt(COUNT(*)) returned 0
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.wasNull() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.isClosed() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 
+|---------|
+|count(*) |
+|---------|
+|0        |
+|---------|
+
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.next() returned false
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. ResultSet.close() returned void
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.getMetaData() returned oracle.jdbc.driver.OracleDatabaseMetaData@745d2269
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. PreparedStatement.close() returned 
+[23-09-14 15:41:01] INFO  log4jdbc.log4j2 - 1. Connection.clearWarnings() returned 
+[23-09-14 15:41:01] INFO  k.k.board.service.BoardServiceImpl - selectList 리턴 : Paging [list=[BoardVO(id=20422, name=배부르고 졸리고, password=123, subject=자고싶다, content=놀고싶다, regDate=Fri Sep 01 13:59:47 KST 2023, commentCount=2, commentList=null), BoardVO(id=20421, name=qqqq, password=qqqq, subject=qqqq, content=qqqq, regDate=Fri Sep 01 13:59:06 KST 2023, commentCount=2, commentList=null), BoardVO(id=20405, name=주인장255, password=12345, subject=제목이야 255, content=내용이야 255, regDate=Fri Aug 25 16:04:47 KST 2023, commentCount=2, commentList=null), BoardVO(id=20404, name=주인장254, password=12345, subject=제목이야 254, content=내용이야 254, regDate=Fri Aug 25 16:04:47 KST 2023, commentCount=2, commentList=null), BoardVO(id=20403, name=주인장253, password=12345, subject=제목이야 253, content=내용이야 253, regDate=Fri Aug 25 16:04:47 KST 2023, commentCount=0, commentList=null), BoardVO(id=20402, name=주인장252, password=12345, subject=제목이야 252, content=내용이야 252, regDate=Fri Aug 25 16:04:47 KST 2023, commentCount=1, commentList=null), BoardVO(id=20401, name=주인장251, password=12345, subject=제목이야 251, content=내용이야 251, regDate=Fri Aug 25 16:04:47 KST 2023, commentCount=0, commentList=null), BoardVO(id=20400, name=주인장250, password=12345, subject=제목이야 250, content=내용이야 250, regDate=Fri Aug 25 16:04:47 KST 2023, commentCount=0, commentList=null), BoardVO(id=20399, name=주인장249, password=12345, subject=제목이야 249, content=내용이야 249, regDate=Fri Aug 25 16:04:47 KST 2023, commentCount=0, commentList=null), BoardVO(id=20398, name=주인장248, password=12345, subject=제목이야 248, content=내용이야 248, regDate=Fri Aug 25 16:04:47 KST 2023, commentCount=0, commentList=null)], totalCount=257, currentPage=1, sizeOfPage=10, sizeOfBlock=10, totalPage=26, startNo=1, endNo=10, startPage=1, endPage=10]
+[23-09-14 15:41:11] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[23-09-14 15:41:11] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+[23-09-14 15:41:11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+[23-09-14 15:41:11] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[23-09-14 15:41:11] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+[23-09-14 15:41:11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 1. Connection closed. {executed in 1ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 1. Connection.close() returned 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 2. Connection closed. {executed in 1ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 2. Connection.close() returned 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 3. Connection closed. {executed in 0ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 3. Connection.close() returned 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 4. Connection closed. {executed in 1ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 4. Connection.close() returned 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 5. Connection closed. {executed in 0ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 5. Connection.close() returned 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 6. Connection closed. {executed in 1ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 6. Connection.close() returned 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 7. Connection closed. {executed in 0ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 7. Connection.close() returned 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 8. Connection closed. {executed in 0ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 8. Connection.close() returned 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 9. Connection closed. {executed in 0ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 9. Connection.close() returned 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 10. Connection closed. {executed in 0ms} 
+[23-09-14 15:41:11] INFO  log4jdbc.log4j2 - 10. Connection.close() returned 
+[23-09-14 15:41:11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

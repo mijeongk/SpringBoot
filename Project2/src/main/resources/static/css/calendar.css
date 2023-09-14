@@ -1,0 +1,47 @@
+#calendar-box {
+	width: 90%;
+	margin: auto;
+	margin-top: 50px;
+}
+
+#calendar {
+
+	width: 80%;
+	margin: auto;
+	height: 800px;
+	
+
+}
+#calendar a{
+	text-decoration-line: none;
+	color: black;
+}
+
+#eventForm {
+	border: 1px solid gray;
+	background-color: white;
+	position:absolute;
+	top:20%;
+	left:10%;
+	width:480px;
+	height:250px;
+	z-index: 10;
+
+
+}
+
+#eventFormTitle {
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 8px;
+	border-bottom: 1px solid gray;
+
+}
+
+#buttonGroup{
+	text-align: right;
+}
+
+.fc-toolbar-chunk {
+	color: lightpink;
+}
