@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- namespace는 반드시 DAO인터페이스와 이름이 일치해야 한다. -->
+<mapper namespace="kr.couple.web.dao.BucketListDAO">
+	<!-- 매퍼파일에 태그 1개당 DAO인터페이스의 메서드 1개를 만든다. -->
+	<!-- SQL명령 1개당 태그 1개씩을 추가한다. -->
+	
+	<select id="selectToday" resultType="java.util.Date">
+		select sysdate from dual
+	</select>
+	
+	<!-- 1. 전체 개수 얻기 : 페이징 -->
+	<select id="selectCount" resultType="int">
+		select count(*) from bucketList where #shared_id = #{}
+	</select>
+	<!-- 2. 1개 얻기 : 내용보기/수정/삭제 -->
+	<select id="selectById" parameterType="int" resultType="BucketListVO">
+		select * from board where where #shared_id = #{}
+	</select>
+	<!-- 3. 1페이지 얻기 : 목록보기 -->
+	<select id="selectList" parameterType="hashmap" resultType="BucketListVO">
+		select
+			Q.*
+		from
+			(select 
+				rownum rnum, R.*
+			from
+				(select * from board order by id) R  -- 먼저 글을 번호 순서대로 가져오고
+			where
+				<![CDATA[
+					rownum <= #{endNo} -- 뒷자리 잘라내고
+				]]>
+			) Q
+		where
+			<![CDATA[
+			rnum >= #{startNo} -- 앞자리 잘라내고
+			]]>		
+	</select>
+	<!-- 4. 저장하기 -->
+	<insert id="insert" parameterType="BucketListVO">
+		insert into 
+			board 
+		values 
+			(board_id_seq.nextval,#{member_name},#{password},#{subject},#{content},sysdate)
+		where #shared_id = #{}
+	</insert>
+	<!-- 5. 수정하기 -->
+	<update id="update" parameterType="BucketListVO">
+		update 
+			board
+		set
+			member_name=#{member_name}, category=#{category},
+			content=#{content},regdate=sysdate, comcheck=#{comcheck}, comdate=sysdate
+		where #shared_id = #{}
+	</update>
+	<!-- 6. 삭제하기 -->
+	<delete id="delete" parameterType="int">
+		delete from board where #shared_id = #{}
+	</delete>
+	
+</mapper>
