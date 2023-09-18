@@ -4,8 +4,8 @@ CREATE SEQUENCE bucketList_seq;
 
 -- 2. 버킷 리스트 테이블 생성
 CREATE TABLE bucketList (
-   shared_id varchar2(20) PRIMARY KEY, -- 키필드
-   list_no NUMBER NOT NULL, -- 원본글 번호
+	list_no NUMBER PRIMARY KEY, -- 키필드, 원본글 번호
+    shared_id varchar2(20) NOT NULL, -- 아이디
    member_name varchar2(20) NOT NULL, -- 작성자
    category varchar2(200) NOT NULL, -- 카테고리
    content varchar2(1000) NOT NULL, -- 내용   
