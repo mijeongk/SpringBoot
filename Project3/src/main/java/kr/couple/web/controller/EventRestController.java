@@ -16,9 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import kr.couple.web.service.EventService;
 import kr.couple.web.vo.EventVO;
 import kr.couple.web.vo.EventsVO;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping(value="/api")
+@Slf4j
 public class EventRestController {
 	
 	@Autowired
@@ -27,6 +29,7 @@ public class EventRestController {
 	// 목록보기
 	@GetMapping("/list")
 	List<EventsVO> getList(){
+		log.info("abcdefg : {}");
 		return eventService.getList();
 	}
 	

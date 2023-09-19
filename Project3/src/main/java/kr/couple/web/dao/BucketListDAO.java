@@ -3,9 +3,11 @@ package kr.couple.web.dao;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
+
 import kr.couple.web.vo.BucketListVO;
 
-
+@Mapper
 public interface BucketListDAO {
 	// <!-- 1. 전체 개수 얻기 : 페이징 -->
 	int selectCount();

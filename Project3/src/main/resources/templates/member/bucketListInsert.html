@@ -12,25 +12,18 @@
 	</style>
 	<script>
 		function formCheck(){
-			let value = $("#name").val(); // 이름 얻고
+			let value = $("#member_name").val(); // 이름 얻고
 			if(value==null || value.trim().length==0){ // 없거나 빈칸들로만  입력되었다면
 				alert('이름은 반드시 입력해야 합니다.'); // 경고
-				 $("#name").val(""); // 입력값 삭제
-				 $("#name").focus(); // 커서 위치
+				 $("#member_name").val(""); // 입력값 삭제
+				 $("#member_name").focus(); // 커서 위치
 				 return false;   // 전송 취소
 			}
-			value = $("#password").val(); // 비번 얻고
+			value = $("#category").val(); // 카테고리 얻고
 			if(value==null || value.trim().length==0){ // 없거나 빈칸들로만  입력되었다면
-				alert('비밀번호는 반드시 입력해야 합니다.'); // 경고
-				 $("#password").val(""); // 입력값 삭제
-				 $("#password").focus(); // 커서 위치
-				 return false;   // 전송 취소
-			}
-			value = $("#subject").val(); // 제목 얻고
-			if(value==null || value.trim().length==0){ // 없거나 빈칸들로만  입력되었다면
-				alert('제목은 반드시 입력해야 합니다.'); // 경고
-				 $("#subject").val(""); // 입력값 삭제
-				 $("#subject").focus(); // 커서 위치
+				alert('카테고리은 반드시 입력해야 합니다.'); // 경고
+				 $("#category").val(""); // 입력값 삭제
+				 $("#category").focus(); // 커서 위치
 				 return false;   // 전송 취소
 			}
 			value = $("#content").val(); // 내용 얻고
@@ -54,18 +47,18 @@
 		 	true값이 리턴 될때만 폼전송이 이루어 진다.  
 		 -->
  		<form action="insertOk" method="post" onsubmit="return formCheck()">
-			<input type="hidden" name="p" th:value="${cv.p}">	 
-			<input type="hidden" name="s" th:value="${cv.s}">	 
-			<input type="hidden" name="b" th:value="${cv.b}">	 
-			<input type="text" name="name" class="form-control" placeholder="이름" id="name" required style="margin-bottom: 3px;">	 
-			<input type="password" name="password" class="form-control" placeholder="비밀번호" id="password" required style="margin-bottom: 3px;">	 
-			<input type="text" name="subject" class="form-control" placeholder="제목" id="subject" required style="margin-bottom: 3px;">
+			<input type="hidden" name="p" th:value="${bv.p}">	 
+			<input type="hidden" name="s" th:value="${bv.s}">	 
+			<input type="hidden" name="b" th:value="${bv.b}">	 
+			<!--<input type="text" name="name" class="form-control" placeholder="이름" id="name" required style="margin-bottom: 3px;">	 -->
+			<input type="member_name" name="member_name" class="form-control" placeholder="이름" id="member_name" required style="margin-bottom: 3px;">	 
+			<input type="text" name="category" class="form-control" placeholder="카테고리" id="category" required style="margin-bottom: 3px;">
 			<section class="mb-5">
 			<textarea class="form-control h-25" rows="10" placeholder="내용" required id="content" name="content"></textarea>
 			</section>
 			<section style="text-align: right;">
 				<input type="submit" value="저장하기" class="btn btn-sm btn-outline-success"/>
-				<input type="button" value="목록으로" class="btn btn-sm btn-outline-success" th:onclick="|location.href='@{list(p=${cv.p},b=${cv.b},s=${cv.s})}'|"/>
+				<input type="button" value="목록으로" class="btn btn-sm btn-outline-success" th:onclick="|location.href='@{list(p=${bv.p},b=${bv.b},s=${bv.s})}'|"/>
 			</section>		 
 		</form>
 	</div>                

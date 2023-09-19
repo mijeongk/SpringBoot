@@ -14,9 +14,8 @@ import kr.couple.web.vo.BucketListVO;
 import kr.couple.web.vo.Paging;
 import lombok.extern.slf4j.Slf4j;
 
-
 @Controller
-@RequestMapping(value = "/member")
+@RequestMapping(value = "/bucketList")
 @Slf4j
 public class BucketListController {
 
@@ -25,12 +24,13 @@ public class BucketListController {
 	// -----------------------------------------------------------------------------------------
 	// 목록보기
 	
-	@RequestMapping(value = {"/", "/bucektList"})
+	@RequestMapping(value = {"/", "/list"})
 	public String getList(@ModelAttribute BucketListCommVO bv, Model model) {
 		Paging<BucketListVO> paging = bucketListService.selectList(bv.getP(), bv.getS(), bv.getB());
 		model.addAttribute("pv", paging);
 		model.addAttribute("bv", bv);
-		return "member/bucektList";
+		log.info("abcdefg : {}", paging.toString());
+		return "/member/bucketList";
 	}
 	//-----------------------------------------------------------------------------------------
 	// 저장하기
@@ -38,7 +38,7 @@ public class BucketListController {
 	@GetMapping(value = "/insert")
 	public String insert(@ModelAttribute BucketListCommVO bv, Model model) {
 		model.addAttribute("bv", bv);
-		return "member/insert";
+		return "member/bucketListInsert";
 	}
 	// 입력내용 저장
 	// GET 요청시는 처리하지 않고 목록으로 간다.
@@ -63,7 +63,7 @@ public class BucketListController {
 	public String update(@ModelAttribute BucketListCommVO bv, Model model) {
 		model.addAttribute("bv", bv);
 		model.addAttribute("bucketList", bucketListService.selectById(bv.getId()));
-		return "member/update";
+		return "member/bucketListUpdate";
 	}
 	// 수정내용 저장
 	// GET 요청시는 처리하지 않고 목록으로 간다.
