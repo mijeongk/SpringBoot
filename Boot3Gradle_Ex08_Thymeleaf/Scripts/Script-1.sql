@@ -17,3 +17,5 @@ CREATE TABLE bucketList (
 SELECT * FROM bucketList;
 
 DROP TABLE bucketList;
+
+INSERT INTO BUCKETLIST b values('id1234', bucketList_seq.nextval, '이름', '카테고리', '내용', sysdate, '0', sysdate);

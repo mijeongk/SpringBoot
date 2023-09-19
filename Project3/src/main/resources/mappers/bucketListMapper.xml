@@ -7,17 +7,13 @@
 	<!-- 매퍼파일에 태그 1개당 DAO인터페이스의 메서드 1개를 만든다. -->
 	<!-- SQL명령 1개당 태그 1개씩을 추가한다. -->
 	
-	<select id="selectToday" resultType="java.util.Date">
-		select sysdate from dual
-	</select>
-	
 	<!-- 1. 전체 개수 얻기 : 페이징 -->
 	<select id="selectCount" resultType="int">
-		select count(*) from bucketList where shared_id = #{shared_id}
+		select count(*) from bucketList
 	</select>
 	<!-- 2. 1개 얻기 : 내용보기/수정/삭제 -->
-	<select id="selectByNo" parameterType="int" resultType="BucketListVO">
-		select * from bucketList where where list_no = #{list_no}
+	<select id="selectById" parameterType="int" resultType="BucketListVO">
+		select * from bucketList where id = #{id}
 	</select>
 	<!-- 3. 1페이지 얻기 : 목록보기 -->
 	<select id="selectList" parameterType="hashmap" resultType="BucketListVO">
@@ -27,7 +23,7 @@
 			(select 
 				rownum rnum, R.*
 			from
-				(select * from bucketList order by id) R  -- 먼저 글을 번호 순서대로 가져오고
+				(select * from bucketList order by id desc) R  -- 먼저 글을 번호 순서대로 가져오고
 			where
 				<![CDATA[
 					rownum <= #{endNo} -- 뒷자리 잘라내고
@@ -43,21 +39,20 @@
 		insert into 
 			bucketList 
 		values 
-			(bucketList_seq.nextval,#{shared_id},#{member_name},#{category},#{content},sysdate,#{comcheck})
-		where list_no = #{list_no}
+			(bucketList_seq.nextval,#{member_name},#{category},#{content},sysdate)
 	</insert>
 	<!-- 5. 수정하기 -->
 	<update id="update" parameterType="BucketListVO">
 		update 
 			bucketList
 		set
-			member_name=#{member_name}, category=#{category},
-			content=#{content},regdate=sysdate, comcheck=#{comcheck}
-		where list_no = #{list_no}
+			category=#{category}, content=#{content}, regdate=sysdate, comcheck=#{comcheck}, comdate=sysdate
+		where
+			id = #{id}
 	</update>
 	<!-- 6. 삭제하기 -->
 	<delete id="delete" parameterType="int">
-		delete from bucketList where #list_no = #{list_no}
+		delete from bucketList where #id = #{id}
 	</delete>
 	
 </mapper>

@@ -19,8 +19,8 @@ import lombok.Data;
 
 @Data
 public class BucketListVO {
+	private int id;
 	private String shared_id;
-	private int list_no;
 	private String member_name;
 	private String category;
 	private String content;

@@ -3,7 +3,7 @@ package kr.couple.web.vo;
 
 import java.util.List;
 
-public class BucketListPaging<T> {
+public class Paging<T> {
 	// 페이징할 대상을 저장할 리스트
 	private List<T> list; // 1페이지 분량의 내용을 저장할 리스트
 	
@@ -22,7 +22,7 @@ public class BucketListPaging<T> {
 	private int endPage;		// 표시할 끝 페이지 번호
 	
 	// 4개의 변수는 생성자로 넘겨 받는다.
-	public BucketListPaging(int totalCount, int currentPage, int sizeOfPage, int sizeOfBlock) {
+	public Paging(int totalCount, int currentPage, int sizeOfPage, int sizeOfBlock) {
 		this.totalCount = totalCount;
 		this.currentPage = currentPage;
 		this.sizeOfPage = sizeOfPage;
@@ -123,7 +123,7 @@ public class BucketListPaging<T> {
 	
 
 	public static void main(String[] args) {
-		BucketListPaging<String> paging = new BucketListPaging<>(123, 13, 10, 10);
+		Paging<String> paging = new Paging<>(123, 13, 10, 10);
 		System.out.println(paging);
 		System.out.println(paging.getPageInfo());
 		System.out.println(paging.getPageList());
