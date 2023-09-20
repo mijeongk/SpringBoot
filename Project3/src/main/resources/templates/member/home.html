@@ -18,11 +18,11 @@
 </head>
 
 <body>
-	
+
 	<div id="wrap">
 
 		<header id="header">
-			
+
 			<div class="header_logo">
 				<a href="/member/home">
 					<i class="fa-regular fa-heart" style="color: #f55656;"></i>
@@ -31,14 +31,14 @@
 
 			<ul class="header_menu">
 				<li><a href="/member/home">home</a></li>
-				<li><a href="">공지사항</a></li>
-				<li><a href=""><i class="fa-solid fa-bars" style="color: #f26977;"></i></a></li>
+				<li><a href="/member/calendar">Calendar</a></li>
+				<li><a href="">Bucket List</a></li>
 			</ul>
-			
+
 		</header>
 
 		<content id="content_middle">
-			
+
 			<span id="prev"><img class="prev" src="/images/flaticon_left.png" alt=""></span>
 
 			<ol id="slider">
@@ -48,78 +48,79 @@
 			</ol>
 
 			<span id="next"><img class="next" src="/images/flaticon_right.png" alt=""></span>
-		
+
 		</content>
-		
-		<content id="content_bottom">				
-			<a class="login" href="">로그인</a>
+
+		<content id="content_bottom">
+			<a class="login" href="/member/login">로그인</a>
 		</content>
-		
+
 		<div id="bottom">
 			<p>이용약관 | 회사정보 </p>
 		</div>
+	</div>
+	
+	<script>
+		$('#next').click(function () {
+			slideNext();
+		})
 
-		<script>
-			$('#next').click(function () {
-				slideNext();
-			})
+		$('#prev').click(function () {
+			slidePrev();
+		})
 
-			$('#prev').click(function () {
-				slidePrev();
-			})
+		function slideNext() {
 
-			function slideNext() {
-
-				if ($('ol li').is(':animated')) {
-					return false;
-				}
-
-				let left = $('li.on').width();
-				let currentIdx = $('li.on').index();
-				let nextIdx = currentIdx + 1;
-
-				if (nextIdx > $('ol li').length - 1) {
-					nextIdx = 0;
-				}
-
-				$('ol li').removeClass('on')
-				$('ol li').eq(currentIdx).css({zIndex: 10})
-				$('ol li').eq(nextIdx).addClass('on').css({
-					left: left,
-					zIndex: 20,
-					display: 'block'
-				}).animate({
-					left: 0
-				}, 800, function () {
-					$('ol li').eq(currentIdx).css({display: 'none'})
-				})
-
+			if ($('ol li').is(':animated')) {
+				return false;
 			}
 
-			function slidePrev() {
+			let left = $('li.on').width();
+			let currentIdx = $('li.on').index();
+			let nextIdx = currentIdx + 1;
 
-				if ($('ol li').is(':animated')) {
-					return false;
-				}
-
-				let left = $('li.on').width() * -1;
-				let currentIdx = $('li.on').index();
-				let prevIdx = currentIdx - 1;
-
-				$('ol li').removeClass('on')
-				$('ol li').eq(currentIdx).css({zIndex: 10})
-				$('ol li').eq(prevIdx).addClass('on').css({
-					left: left,
-					zIndex: 20,
-					display: 'block'
-				}).animate({
-					left: 0
-				}, 800, function () {
-					$('ol li').eq(currentIdx).css({display: 'none'})
-				})
-
+			if (nextIdx > $('ol li').length - 1) {
+				nextIdx = 0;
 			}
-		</script>
+
+			$('ol li').removeClass('on')
+			$('ol li').eq(currentIdx).css({zIndex: 10})
+			$('ol li').eq(nextIdx).addClass('on').css({
+				left: left,
+				zIndex: 20,
+				display: 'block'
+			}).animate({
+				left: 0
+			}, 800, function () {
+				$('ol li').eq(currentIdx).css({display: 'none'})
+			})
+
+		}
+
+		function slidePrev() {
+
+			if ($('ol li').is(':animated')) {
+				return false;
+			}
+
+			let left = $('li.on').width() * -1;
+			let currentIdx = $('li.on').index();
+			let prevIdx = currentIdx - 1;
+
+			$('ol li').removeClass('on')
+			$('ol li').eq(currentIdx).css({zIndex: 10})
+			$('ol li').eq(prevIdx).addClass('on').css({
+				left: left,
+				zIndex: 20,
+				display: 'block'
+			}).animate({
+				left: 0
+			}, 800, function () {
+				$('ol li').eq(currentIdx).css({display: 'none'})
+			})
+
+		}
+	</script>
 </body>
 
 </html>

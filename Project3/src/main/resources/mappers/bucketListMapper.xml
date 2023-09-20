@@ -35,11 +35,11 @@
 			]]>
 	</select>
 	<!-- 4. 저장하기 -->
-	<insert id="insert" parameterType="BucketListVO">
+	<insert id="insert" parameterType="BucketListVO" >
 		insert into 
 			bucketList 
 		values 
-			(bucketList_seq.nextval,#{member_name},#{category},#{content},sysdate)
+			(bucketList_seq.nextval, #{shared_id}, #{member_name}, #{category}, #{content}, sysdate, #{comcheck}, sysdate)
 	</insert>
 	<!-- 5. 수정하기 -->
 	<update id="update" parameterType="BucketListVO">

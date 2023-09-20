@@ -18,9 +18,9 @@ public class homeController {
 
 		return "/member/home";
 	}
-//	@GetMapping(value = "/member/bucketList")
-//	public String BucketList(Model model) {
-//		log.info("abcdefg : {}");
-//		return "/member/bucketList";
-//	}
+	@GetMapping(value = "/bucketList/bucketList")
+	public String BucketList(Model model) {
+	
+		return "/bucketList/bucketList";
+	}
 }

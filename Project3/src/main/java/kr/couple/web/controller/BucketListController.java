@@ -30,13 +30,14 @@ public class BucketListController {
 		model.addAttribute("pv", paging);
 		model.addAttribute("bv", bv);
 		log.info("abcdefg : {}", paging.toString());
-		return "/member/bucketList";
+		return "/bucketList/bucketList";
 	}
 	//-----------------------------------------------------------------------------------------
 	// 저장하기
 	// 입력폼
 	@GetMapping(value = "/insert")
 	public String insert(@ModelAttribute BucketListCommVO bv, Model model) {
+		log.info("insert({},{})리턴", bv, model);
 		model.addAttribute("bv", bv);
 		return "member/bucketListInsert";
 	}
@@ -50,10 +51,11 @@ public class BucketListController {
 	@PostMapping(value = "/insertOk")
 	public String insertOkPost(@ModelAttribute BucketListCommVO bv, @ModelAttribute BucketListVO vo) {
 		// 1. 서비스를 호출하여 저장을 수행한다.
+		
 		if(vo!=null) {
 			bucketListService.insert(vo);
 		}
-		// 2. 1페이지로 이동한다.
+		log.info("insertOkPost({},{})리턴", bv, vo);
 		return "redirect:/bucketList/?p=1&s=" + bv.getS() + "&b=" + bv.getB();
 	}
 	//-----------------------------------------------------------------------------------------
