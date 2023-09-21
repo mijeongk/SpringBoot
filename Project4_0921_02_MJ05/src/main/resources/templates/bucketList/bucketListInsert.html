@@ -11,44 +11,7 @@
 	<style>
 
 	</style>
-	<script>
-		function formCheck() {
-			let value = $("#member_name").val(); // 이름 얻고
-			if (value == null || value.trim().length == 0) { // 없거나 빈칸들로만  입력되었다면
-				alert('이름은 반드시 입력해야 합니다.'); // 경고
-				$("#member_name").val(""); // 입력값 삭제
-				$("#member_name").focus(); // 커서 위치
-				return false;   // 전송 취소
-			}
-			
-			value = $("#content").val(); // 내용 얻고
-			if (value == null || value.trim().length == 0) { // 없거나 빈칸들로만  입력되었다면
-				alert('내용은 반드시 입력해야 합니다.'); // 경고
-				$("#content").val(""); // 입력값 삭제
-				$("#content").focus(); // 커서 위치
-				return false;   // 전송 취소
-			}
-			return true;
-		}
 
-		function getCheckboxValue() {
-			// 선택된 목록 가져오기
-			const query = 'input[name="animal"]:checked';
-			const selectedEls =
-				document.querySelectorAll(query);
-
-			// 선택된 목록에서 value 찾기
-			let result = '';
-			selectedEls.forEach((el) => {
-				result += el.value + ' ';
-			});
-
-			// 출력
-			document.getElementById('result').innerText
-				= result;
-		}
-
-	</script>
 </head>
 
 <body>
@@ -81,6 +44,46 @@
 			</section>
 		</form>
 	</div>
+
+	<script>
+		function formCheck() {
+			let value = $("#member_name").val(); // 이름 얻고
+			if (value == null || value.trim().length == 0) { // 없거나 빈칸들로만  입력되었다면
+				alert('이름은 반드시 입력해야 합니다.'); // 경고
+				$("#member_name").val(""); // 입력값 삭제
+				$("#member_name").focus(); // 커서 위치
+				return false;   // 전송 취소
+			}
+
+			value = $("#content").val(); // 내용 얻고
+			if (value == null || value.trim().length == 0) { // 없거나 빈칸들로만  입력되었다면
+				alert('내용은 반드시 입력해야 합니다.'); // 경고
+				$("#content").val(""); // 입력값 삭제
+				$("#content").focus(); // 커서 위치
+				return false;   // 전송 취소
+			}
+			return true;
+		}
+
+		function getCheckboxValue() {
+			// 선택된 목록 가져오기
+			const query = 'input[name="animal"]:checked';
+			const selectedEls =
+				document.querySelectorAll(query);
+
+			// 선택된 목록에서 value 찾기
+			let result = '';
+			selectedEls.forEach((el) => {
+				result += el.value + ' ';
+			});
+
+			// 출력
+			document.getElementById('result').innerText
+				= result;
+		}
+
+	</script>
+
 </body>
 
 </html>

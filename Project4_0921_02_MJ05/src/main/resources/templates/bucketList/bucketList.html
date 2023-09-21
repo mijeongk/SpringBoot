@@ -16,26 +16,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.0.js"
 		integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-	<style>
-		
-
-	</style>
-
-	<script th:inline="javascript">
-
-		function setCount() {
-			//alert(document.querySelector("#cnt").value);
-			let size = document.querySelector("#cnt").value;
-			let p = [(${pv.currentPage})];
-			let s = size;
-			let b = [(${pv.sizeOfBlock})];
-			location.href = "?p=" + p + "&s=" + s + "&b=" + b;
-		}
-	</script>
 
 </head>
 
 <body>
+	
 	<header id="header">
 
 		<div class="header_logo">
@@ -52,6 +37,7 @@
 		</ul>
 
 	</header>
+	
 	<div class="p-2 mb-5 text-center bg-light">
 		<h2 class="mb-3">Bucket List</h2>
 	</div>
@@ -98,16 +84,17 @@
 						<td>[[${pv.totalCount-(pv.currentPage-1) * pv.sizeOfPage - vs.index}]]</td>
 						<td>[[${vo.Member_name}]]</td>
 						<td>
-							<a th:href="@{/member/view?id={id}(id=${vo.id},p=${pv.currentPage},s=${pv.sizeOfPage},b=${pv.sizeOfBlock})}">
+							<a
+								th:href="@{/member/view?id={id}(id=${vo.id},p=${pv.currentPage},s=${pv.sizeOfPage},b=${pv.sizeOfBlock})}">
 								[[${vo.content}]]
 							</a>
 						</td>
 						<td>[[${#dates.format(vo.regdate,'MM-dd hh:mm')}]]</td>
 						<td>
 							<div class="check">
-								<input id="check" class="check" type='checkbox' name='bucketList' th:value='${vo.content}'
-									onclick='getCheckboxValue()' />
-								<label for="check1" >[[${vo.comcheck}]]</label>
+								<input id="check" class="check" type='checkbox' name='bucketList'
+									th:value='${vo.content}' onclick='getCheckboxValue()' />
+								<label for="check1">[[${vo.comcheck}]]</label>
 							</div>
 						</td>
 					</tr>
@@ -143,7 +130,9 @@
 				<th:block th:if="${pv.totalCount gt 0}">
 					<tr th:each="vo, vs : ${pv.list}" onmouseover="this.style.backgroundColor='rgb(254, 231, 231)'"
 						onmouseout="this.style.backgroundColor='white'">
-						<td ><div id='result'></div></td>
+						<td>
+							<div id='result'></div>
+						</td>
 					</tr>
 				</th:block>
 				<!-- 글이 없다면 반복문으로 출력 -->
@@ -155,10 +144,21 @@
 
 			</table>
 		</div>
-
-
-
+		
 	</div>
+
+	<script th:inline="javascript">
+
+		function setCount() {
+			//alert(document.querySelector("#cnt").value);
+			let size = document.querySelector("#cnt").value;
+			let p = [(${pv.currentPage})];
+			let s = size;
+			let b = [(${pv.sizeOfBlock})];
+			location.href = "?p=" + p + "&s=" + s + "&b=" + b;
+		}
+	</script>
+
 	<script>
 		function getCheckboxValue() {
 			// 선택된 목록 가져오기
