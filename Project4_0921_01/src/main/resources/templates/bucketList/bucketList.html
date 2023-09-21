@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>bucketList</title>
+	<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/dist/css/bootstrap.min.css">
+	<script src="/webjars/jquery/3.6.4/dist/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/5.3.0/dist/js/bootstrap.min.js"></script>
+	<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+	<script src="https://kit.fontawesome.com/013ab40b7f.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/bucketList.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.js"
+		integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<style>
+		
+
+	</style>
+
+	<script>
+		function setCount() {
+			//alert(document.querySelector("#cnt").value);
+			let size = document.querySelector("#cnt").value;
+			let p = [(${pv.currentPage})];
+			let s = size;
+			let b = [(${pv.sizeOfBlock})];
+			location.href = "?p=" + p + "&s=" + s + "&b=" + b;
+		}
+	</script>
+
+</head>
+
+<body>
+	<header id="header">
+
+		<div class="header_logo">
+			<a href="/">
+				<i class="fa-regular fa-heart" style="color: #f55656;"></i>
+			</a>
+		</div>
+
+		<ul class="header_menu">
+			<li><a href="/home">첫페이지</a></li>
+			<li><a href="/member/calendar">Calendar</a></li>
+			<li><a href="member/bucketList">Bucket List</a></li>
+			<li><a href="">회원정보</a></li>
+		</ul>
+
+	</header>
+	<div class="p-2 mb-5 text-center bg-light">
+		<h2 class="mb-3">Bucket List</h2>
+	</div>
+
+	<div id="wrap">
+		<div class="container">
+			<div class="container_top">
+				<tr>
+					<td colspan="7">
+						<button class="btn btn-sm btn-outline-success"
+							th:onclick="|location.href='@{insert(p=${bv.p},b=${bv.b},s=${bv.s})}'|">새글쓰기</button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="7">
+						[[${pv.getPageInfo()}]]
+						<select id="cnt" onchange="setCount()">
+							<option value="5" th:selected="${pv.sizeOfPage==5}"> 5개씩 보기</option>
+							<option value="10" th:selected="${pv.sizeOfPage==10}">10개씩 보기</option>
+							<option value="20" th:selected="${pv.sizeOfPage==20}">20개씩 보기</option>
+							<option value="50" th:selected="${pv.sizeOfPage==50}">50개씩 보기</option>
+						</select>
+					</td>
+				</tr>
+			</div>
+			<table class="container_context1">
+				<tr>
+					<th>번호</th>
+					<th>작성자</th>
+					<th>카테고리</th>
+					<th style="width: 50%;">내용</th>
+					<th>작성일</th>
+					<th>완료</th>
+				</tr>
+				<!-- 글이 있다면 반복문으로 출력 -->
+				<th:block th:if="${pv.totalCount gt 0}">
+					<tr th:each="vo, vs : ${pv.list}" onmouseover="this.style.backgroundColor='rgb(254, 231, 231)'"
+						onmouseout="this.style.backgroundColor='white'">
+						<!-- 
+						 글 번호에 아이디를 출력하지 않고 글번호는 계산해서 출력하자
+						 시작번호 = 전체개수 - (현재페이지 -1) * 페이지당 글수
+						 글번호 = 시작번호 - 반복횟수
+						 반복문에 변수 2개를 쓰면 첫번째 변수는 값이고, 두번째 변수는 상태값이다.
+					-->
+						<td>[[${pv.totalCount-(pv.currentPage-1) * pv.sizeOfPage - vs.index}]]</td>
+						<td>[[${vo.Member_name}]]</td>
+						<td>[[${vo.category}]]</td>
+						<td>
+							<a
+								th:href="@{/bucketList/view?id={id}(id=${vo.id},p=${pv.currentPage},s=${pv.sizeOfPage},b=${pv.sizeOfBlock})}">
+								[[${vo.content}]]
+							</a>
+						</td>
+						<td>[[${#dates.format(vo.regdate,'MM-dd hh:mm')}]]</td>
+						<td>
+							<div class="check">
+								<input type='checkbox' name='bucketList' value='${vo.Member_name},${vo.content},${vo.content}'
+									onclick='getCheckboxValue()' />
+								<label for="check1">[[${vo.comcheck}]]</label>
+							</div>
+						</td>
+					</tr>
+				</th:block>
+				<!-- 글이 없다면 반복문으로 출력 -->
+				<th:block th:if="${pv.totalCount eq 0}">
+					<tr>
+						<td colspan="4" style="text-align: center;">등록된 글이 없습니다.</td>
+					</tr>
+				</th:block>
+				<tr>
+					<td colspan="4" style="text-align: right; border: none;">[(${pv.getPageList2()})]</td>
+				</tr>
+			</table>
+		</div>
+		<div class="container">
+			<table>
+				<tr>
+					<td colspan="7" style="text-align: right; border: none;">
+						[[${pv.getPageInfo()}]]
+						<select id="cnt" onchange="setCount()">
+							<option value="5" th:selected="${pv.sizeOfPage==5}"> 5개씩 보기</option>
+							<option value="10" th:selected="${pv.sizeOfPage==10}">10개씩 보기</option>
+							<option value="20" th:selected="${pv.sizeOfPage==20}">20개씩 보기</option>
+							<option value="50" th:selected="${pv.sizeOfPage==50}">50개씩 보기</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>번호</th>
+					<th>작성자</th>
+					<th>카테고리</th>
+					<th style="width: 50%;">내용</th>
+					<th>작성일</th>
+					<th>완료일</th>
+					<th>완료</th>
+				</tr>
+				<!-- 글이 있다면 반복문으로 출력 -->
+				<th:block th:if="${pv.totalCount gt 0}">
+					<tr th:each="vo, vs : ${pv.list}" onmouseover="this.style.backgroundColor='rgb(254, 231, 231)'"
+						onmouseout="this.style.backgroundColor='white'">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><div id='result'></div></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</th:block>
+				<!-- 글이 없다면 반복문으로 출력 -->
+				<th:block th:if="${pv.totalCount eq 0}">
+					<tr>
+						<td colspan="4" style="text-align: center;">등록된 글이 없습니다.</td>
+					</tr>
+				</th:block>
+
+				<tr>
+					<td colspan="4" style="text-align: right; border: none;">[(${pv.getPageList2()})]</td>
+				</tr>
+
+			</table>
+		</div>
+
+
+
+	</div>
+	<script>
+		function getCheckboxValue() {
+			// 선택된 목록 가져오기
+			const query = 'input[name="bucketList"]:checked';
+			const selectedEls =
+				document.querySelectorAll(query);
+
+			// 선택된 목록에서 value 찾기
+			let result = '';
+			selectedEls.forEach((el) => {
+				result += el.value + ' ';
+			});
+
+			// 출력
+			document.getElementById('result').innerText
+				= result;
+		}
+	</script>
+
+</body>
+
+</html>

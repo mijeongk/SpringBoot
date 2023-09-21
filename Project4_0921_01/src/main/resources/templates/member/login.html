@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- Thymeleaf를 사용하겠다. -->
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>로그인페이지</title>
+<link rel="stylesheet" href="/webjars/bootstrap/5.3.0/dist/css/bootstrap.min.css">
+<script src="/webjars/jquery/3.6.4/dist/jquery.min.js"></script>
+<script src="/webjars/bootstrap/5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="/webjars/axios/1.4.0/dist/axios.min.js"></script>
+<link rel="stylesheet" href="/css/style.css">
+<style type="text/css">
+	#info {
+			width: 90%;
+			padding: 15px;
+			margin: auto;
+			margin-bottom: 15px;
+			font-size: 13pt;
+			color: rgb(0, 0, 0);
+			
+			}
+		h2 {
+			display: inline-block;
+		}
+		.bi bi-calendar-heart {
+			margin-top: 3px;
+			display: inline-block;
+		}
+		table {
+			width: 30%; 
+			margin: auto; 
+			border: none; 
+			padding:20px;
+			display: flex;
+		}
+		.title {
+			background-color: rgb(255, 230, 230); 
+			color: rgb(0, 0, 0); 
+			font-style: oblique; 
+			font-size: 18pt; 
+			text-align: center; 
+			padding: 10px;
+		}
+		.loginBtn{
+			width: 130px; 
+			height: 70px;
+			background-color: rgb(251, 213, 214);
+			border: none;
+		}
+		td {
+			padding: 10px;
+		}
+</style>
+<script>
+	function formCheck(){
+		let value = $("#shared_id").val();
+		if(value==null || value.trim().length==0){
+			alert("아이디는 반드시 입력해야 합니다.");
+			$("#shared_id").val("");
+			$("#shared_id").focus();
+			return false;
+		}
+		if(value.indexOf(" ")>0){
+			alert("아이디에는 공백을 포함할 수 없습니다.");
+			$("#shared_id").val("");
+			$("#shared_id").focus();
+			return false;
+		}
+		value = $("#shared_password").val();
+		if(value==null || value.trim().length==0){
+			alert("비밀번호는 반드시 입력해야 합니다.");
+			$("#shared_password").val("");
+			$("#shared_password").focus();
+			return false;
+		}
+		return true;
+	}
+	
+</script>
+</head>
+<body>
+	
+	<div id="info">
+		<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-calendar-heart" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5ZM1 14V4h14v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1Zm7-6.507c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+		</svg>
+		<h2><a href="/">logo</a></h2>
+		<hr />
+		<form action="/member/loginOk" method="post" onsubmit="return formCheck()">
+		<table>
+			<tr>
+				<td class="title" colspan="2">Login</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" id="shared_id" name="shared_id" placeholder="아이디" required tabindex="1" th:value="${shared_id}"/>
+				</td>
+				<td rowspan="2">
+					<input type="submit" value="로그인" class="loginBtn" tabindex="3"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="password" id="shared_password" name="shared_password" placeholder="비밀번호" required tabindex="2" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<label>
+					<input type="checkbox" value="true" name="saveID" th:checked="${shared_id}"/>
+					아이디 저장하기						
+					</label>
+					<br />
+					<a href="/member/findMemberId">아이디 찾기</a>  &nbsp;&nbsp;|
+					&nbsp;&nbsp;<a href="/member/findPassword">비밀번호 찾기</a>  &nbsp;&nbsp;|
+					&nbsp;&nbsp;<a href="/member/join">회원가입</a>
+				</td>
+			</tr>
+		</table>
+		</form>
+		<hr />
+		<a href="/"  class="btn btn-sm btn-outline-success">Home</a>
+	</div>
+</body>
+</html>
