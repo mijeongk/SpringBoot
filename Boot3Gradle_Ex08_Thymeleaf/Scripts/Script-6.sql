@@ -7,7 +7,6 @@ CREATE TABLE bucketList (
 	id NUMBER PRIMARY KEY, -- 키필드
 	shared_id varchar2(20) NOT NULL, -- 아이디
 	member_name varchar2(20) NOT NULL, -- 작성자
-	category varchar2(200) NOT NULL, -- 카테고리
 	content varchar2(1000) NOT NULL, -- 내용   
 	regdate timestamp DEFAULT sysdate, -- 작성일
 	comcheck CHAR(1) CHECK(comcheck IN('1','0')), -- 완료
