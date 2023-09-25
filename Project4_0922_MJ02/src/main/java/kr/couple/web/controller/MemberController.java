@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
@@ -145,6 +146,14 @@ public class MemberController {
 		return "redirect:/";
 	}
 	
+	// 디데이 띄우기
+	@GetMapping(value = "/dday")
+	public String dday(@RequestParam String shared_id, Model model) {
+		MemberVO memberVO = memberService.getByMemberId(shared_id);
+		model.addAttribute("vo", memberVO);
+		return "/member/dday";
+	}
+
 	
 	@Autowired
 	private JavaMailSender javaMailSender;
@@ -178,4 +187,14 @@ public class MemberController {
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
 

@@ -16,6 +16,7 @@ public class homeController {
 	public String viewCalendar(Model model) {
 		return "/member/calendar";
 	}
+	
 //	@GetMapping(value = "/member/bucketList")
 //	public String viewbucketList(Model model) {
 //		return "member/bucketList";
