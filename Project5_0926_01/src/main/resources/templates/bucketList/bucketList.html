@@ -28,11 +28,11 @@
 				<i class="fa-regular fa-heart" style="color: #f55656;"></i>
 			</a>
 		</div>
-			
+
 		<ul class="header_menu">
 			<li><a href="/home">첫페이지</a></li>
 			<div>|</div>
-			<li><a th:href='@{/member/calendar(shared_id=${session.mvo.shared_id})}' >Calendar</a></li>
+			<li><a th:href='@{/member/calendar(shared_id=${session.mvo.shared_id})}'>Calendar</a></li>
 			<div>|</div>
 			<li><a th:href='@{/member/dday(shared_id=${session.mvo.shared_id})}'>D-day</a></li>
 			<div>|</div>
@@ -97,7 +97,7 @@
 					</tr>
 				</th:block>
 				<tr>
-					<td colspan="7">
+					<td colspan="7" class="new_box">
 						<button class="btn btn-sm btn-outline-success"
 							th:onclick="|location.href='@{insert(p=${bv.p},b=${bv.b},s=${bv.s})}'|">새글쓰기</button>
 					</td>
